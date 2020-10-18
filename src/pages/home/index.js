@@ -24,8 +24,11 @@ export default function Home() {
       </div>
       <div className="content-row">
         <div>
+          <p>
+            Want to know more about this person? Navigate thru options in nav
+            bar and find more about Mauro!
+          </p>
           <i>Be patient! Stills under construction!</i>
-          <p>Lorem Ipsum Dolor Sit Ament</p>
         </div>
       </div>
     </Content>
