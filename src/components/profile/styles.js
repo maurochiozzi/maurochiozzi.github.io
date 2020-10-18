@@ -1,14 +1,11 @@
-import styled from 'styled-components'
+import styled from "styled-components";
 
 const PictureFrame = styled.img`
-    width: 150px;
-    
-    border-radius: 50%;
-    border-style: solid;
-    border-color: grey;
-    border-width: thin;
+  width: 150px;
 
-    background: white;
-`
+  border-radius: 50%;
+
+  background: white;
+`;
 
 export default PictureFrame;
