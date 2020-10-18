@@ -2,7 +2,7 @@ import React from "react";
 
 import { Link } from "react-router-dom";
 
-import { Nav, Hr } from "./styles";
+import { Nav } from "./styles";
 
 export default function Bar() {
   return (
@@ -12,7 +12,6 @@ export default function Bar() {
         <Link>About</Link>
         <Link>Projects</Link>
       </Nav>
-      <Hr />
     </React.Fragment>
   );
 }
