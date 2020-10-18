@@ -8,7 +8,7 @@ export default function Bar() {
   return (
     <Nav>
       <Link to="/">mChiozzi</Link>
-      <Link>About</Link>
+      <Link to="about">About</Link>
       <Link>Projects</Link>
     </Nav>
   );

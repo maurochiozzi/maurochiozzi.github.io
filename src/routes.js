@@ -5,6 +5,7 @@ import Bar from "./components/bar";
 import Footer from "./components/footer";
 
 import About from "./pages/about";
+import Home from "./pages/home";
 
 export default function Routes() {
   return (
@@ -12,7 +13,8 @@ export default function Routes() {
       <Bar />
 
       <Switch>
-        <Route path="/" component={About} />
+        <Route path="/" exact component={Home} />
+        <Route path="/about" component={About} />
       </Switch>
 
       <Footer />
