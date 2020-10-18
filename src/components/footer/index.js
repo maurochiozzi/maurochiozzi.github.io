@@ -1,13 +1,21 @@
 import React from "react";
 
-import { Footer, Hr } from "./styles";
+import { Footer } from "./styles";
+
+import { FaLinkedin, FaGithub, FaEnvelope } from "react-icons/fa";
 
 export default function Bar() {
   return (
     <Footer>
-      <a>GitHub</a>
-      <a>LinkedIn</a>
-      <a>E-mail</a>
+      <a href={"https://github.com/maurochiozzi"}>
+        <FaGithub />
+      </a>
+      <a href={"https://www.linkedin.com/in/maurochiozzi/"}>
+        <FaLinkedin />
+      </a>
+      <a href={"mailto: mchiozzi95@gmail.com"}>
+        <FaEnvelope />
+      </a>
     </Footer>
   );
 }

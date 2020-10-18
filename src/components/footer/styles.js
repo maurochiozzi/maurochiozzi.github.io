@@ -12,10 +12,9 @@ export const Footer = styled.div`
 
   display: flex;
   align-items: center;
-  justify-content: space-between;
 
   a {
-    padding: 0 5%;
+    padding: 0 10px;
     text-decoration: none;
     color: inherit;
   }

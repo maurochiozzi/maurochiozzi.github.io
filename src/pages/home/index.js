@@ -1,6 +1,6 @@
 import React from "react";
 
-import Window from "../../assets/images/profile.jpg";
+import Window from "../../assets/images/window.jpg";
 
 import { Content } from "./styles";
 
