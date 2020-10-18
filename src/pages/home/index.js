@@ -9,12 +9,13 @@ export default function Home() {
     <Content>
       <div className="content-row">
         <div className="main-content">
-          <p>
-            - Hey! It's me, <b>Mauro</b>!
+          <p className="left">
+            - <i>Hey!</i> It's me, <b>Mauro!</b>
           </p>
-          <i>Mauro who? - </i>
-          <p>
-            - Mauro <b>Chiozzi</b>!
+          <i className="right">Mauro </i>
+          <i className="right under">who?</i> -
+          <p className="left">
+            - Mauro <b>Chiozzi!</b>
           </p>
         </div>
         <div className="picture-content">

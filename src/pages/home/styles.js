@@ -12,13 +12,31 @@ export const Content = styled.div`
   text-align: center;
 
   .content-row {
+    text-align: center;
+
     display: table-row;
   }
 
   .main-content {
+    font-size: calc(10px + 5vmin);
     width: 70%;
-    padding: 20px;
+
+    padding-left: 10%;
+
     vertical-align: middle;
+
+    .left {
+      text-align: left;
+    }
+
+    .right {
+      text-align: right;
+    }
+
+    .under {
+      text-decoration: underline;
+    }
+
     display: table-cell;
   }
 
