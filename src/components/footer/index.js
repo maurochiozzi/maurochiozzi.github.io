@@ -1,9 +1,13 @@
 import React from "react";
 
-export default function Footer() {
+import { Footer, Hr } from "./styles";
+
+export default function Bar() {
   return (
-    <div>
-      <label>Contact</label>
-    </div>
+    <Footer>
+      <a>GitHub</a>
+      <a>LinkedIn</a>
+      <a>E-mail</a>
+    </Footer>
   );
 }
