@@ -19,9 +19,9 @@ function App() {
 
       <div className="app-main-content">
         <Switch>
-          <Route path="/" exact component={Home} />
-          <Route path="/about" component={About} />
-          <Route path="/projects" component={Projects} />
+          <Route path="/me/" exact component={Home} />
+          <Route path="/me/about" component={About} />
+          <Route path="/me/projects" component={Projects} />
           <Route path="*" component={NotFound} />
         </Switch>
       </div>
