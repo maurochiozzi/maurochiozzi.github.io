@@ -24,6 +24,7 @@ export const Content = styled.div`
     text-align: center;
     font-size: 26px;
     font-weight: bold;
+    margin-bottom: 10px;
   }
 
   .under {

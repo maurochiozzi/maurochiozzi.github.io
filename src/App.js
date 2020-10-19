@@ -9,6 +9,7 @@ import Footer from "./components/footer";
 
 import About from "./pages/about";
 import Home from "./pages/home";
+import Projects from "./pages/projects";
 import NotFound from "./pages/notfound";
 
 function App() {
@@ -20,6 +21,7 @@ function App() {
         <Switch>
           <Route path="/" exact component={Home} />
           <Route path="/about" component={About} />
+          <Route path="/projects" component={Projects} />
           <Route path="*" component={NotFound} />
         </Switch>
       </div>
