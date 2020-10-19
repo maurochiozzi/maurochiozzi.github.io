@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 
-import { Content } from "./styles";
+import { CardBox, Modal } from "./styles";
+
+import { FaTimesCircle } from "react-icons/fa";
 
 export function Card(props) {
   const [showDetails, setShowDetails] = useState(false);
@@ -10,20 +12,22 @@ export function Card(props) {
   };
 
   return (
-    <Content>
-      <div className="card-box" onClick={handleDetails}>
-        <div className="title">{props.title}</div>
-        <div className="picture">
-          <img src={props.thumbnail} alt="Project Thumbnail" />
+    <React.Fragment>
+      <CardBox>
+        <div className="card-box" onClick={handleDetails}>
+          <div className="title">{props.title}</div>
+          <div className="picture">
+            <img src={props.thumbnail} alt="Project Thumbnail" />
+          </div>
+          <div className="caption">{props.caption}</div>
+          <div className="button">Learn More</div>
         </div>
-        <div className="caption">{props.caption}</div>
-        <div className="button">Learn More</div>
-      </div>
+      </CardBox>
 
       {showDetails && (
-        <div className="card-details">
+        <Modal>
           <span className="close-button" onClick={handleDetails}>
-            Close Button
+            <FaTimesCircle />
           </span>
           <div className="title">{props.title}</div>
           <div>Carrousel</div>
@@ -31,8 +35,8 @@ export function Card(props) {
           <div className="button" onClick={handleDetails}>
             Back
           </div>
-        </div>
+        </Modal>
       )}
-    </Content>
+    </React.Fragment>
   );
 }

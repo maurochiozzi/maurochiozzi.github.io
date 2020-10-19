@@ -1,47 +1,18 @@
 import styled from "styled-components";
 
-export const Content = styled.div`
-  .card-box {
-    margin: 10px;
+export const CardBox = styled.div`
+  margin: 10px;
 
-    width: 300px;
-    min-width: 300px;
-    height: 400px;
+  width: 300px;
+  min-width: 300px;
+  height: 400px;
 
-    text-align: left;
+  text-align: left;
 
-    border-radius: 10px;
-    border-style: solid;
-    border-width: 1px;
-    border-color: #394867;
-
-    box-shadow: 1px 1px grey;
-  }
-
-  .card-details {
-    position: fixed;
-    z-index: 1;
-
-    left: 0;
-    top: 100px;
-    width: 80%;
-    min-width: 300px;
-    height: 80%;
-
-    overflow: auto;
-
-    background-color: #14274e;
-    border-radius: 10px;
-    border-style: solid;
-    border-width: 1px;
-    border-color: #394867;
-
-    box-shadow: 1px 1px grey;
-  }
-
-  .close-button {
-    float: right;
-  }
+  border-radius: 10px;
+  border-style: solid;
+  border-width: 1px;
+  border-color: #14274e;
 
   .title {
     height: 40px;
@@ -75,8 +46,55 @@ export const Content = styled.div`
     border-radius: 4px;
 
     padding: 1px 5px 2px 5px;
-    background-color: #ffffff;
-    color: #14274e;
+    background-color: #14274e;
+    color: #ffffff;
+
+    cursor: pointer;
+  }
+`;
+
+export const Modal = styled.div`
+  position: fixed;
+  z-index: 1;
+
+  top: 100px;
+
+  width: 80%;
+  min-width: 300px;
+
+  height: 80%;
+
+  overflow: auto;
+
+  background-color: #ffffff;
+  border-radius: 10px;
+  border-style: solid;
+  border-width: 1px;
+  border-color: #14274e;
+
+  .close-button {
+    float: right;
+    padding: 20px;
+  }
+
+  .title {
+    height: 40px;
+    padding: 10px 10px 0px 25px;
+    text-align: left;
+  }
+
+  .button {
+    height: 23px;
+    float: right;
+
+    margin-right: 15px;
+    margin-bottom: 0px;
+
+    border-radius: 4px;
+
+    padding: 1px 5px 2px 5px;
+    background-color: #14274e;
+    color: #ffffff;
 
     cursor: pointer;
   }
