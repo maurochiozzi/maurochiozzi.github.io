@@ -2,7 +2,8 @@ import styled from "styled-components";
 
 export const Content = styled.div`
   margin: auto;
-  padding: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
 
   text-align: center;
 
@@ -17,5 +18,12 @@ export const Content = styled.div`
     margin-right: auto;
     max-width: 500px;
     font-size: 18px;
+    margin-bottom: 50px;
+  }
+
+  .wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
   }
 `;
