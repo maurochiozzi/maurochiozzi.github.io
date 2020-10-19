@@ -52,7 +52,15 @@ export function ProjectCard(props) {
             </Carousel>
           )}
 
-          <div className="text-body">{project.text}</div>
+          <div className="text-body">
+            {project.text.map((paragraph) => (
+              <p>{paragraph}</p>
+            ))}
+          </div>
+
+          <div>
+            <p>Main tools/technologies: {project.tools.join(", ")}.</p>
+          </div>
           <div className="button" onClick={handleDetails}>
             Back
           </div>

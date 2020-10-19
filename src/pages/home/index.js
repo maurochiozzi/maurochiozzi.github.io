@@ -22,15 +22,6 @@ export default function Home() {
           <img src={Window} alt="Under Construction" width="100%" />
         </div>
       </div>
-      <div className="content-row">
-        <div>
-          <p>
-            Want to know more about this person? Navigate thru options in nav
-            bar and find more about Mauro!
-          </p>
-          <i>Be patient! Stills under construction!</i>
-        </div>
-      </div>
     </Content>
   );
 }
