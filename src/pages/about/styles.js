@@ -5,6 +5,8 @@ export const Content = styled.div`
   padding: 10px;
   max-width: 600px;
 
+  font-size: 18px;
+
   .highlight {
     font-weight: bold;
     color: #eeecda;
@@ -24,8 +26,12 @@ export const Content = styled.div`
     font-weight: bold;
   }
 
-  font-size: 18px;
   .under {
     text-decoration: underline;
+  }
+
+  a {
+    text-decoration: none;
+    color: inherit;
   }
 `;
