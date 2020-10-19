@@ -9,7 +9,7 @@ export default function Bar() {
     <Nav>
       <Link to="/">mChiozzi</Link>
       <Link to="/about">About</Link>
-      <Link to="/projects">Projects</Link>
+      <Link to="/projects">Awesome Projects</Link>
     </Nav>
   );
 }

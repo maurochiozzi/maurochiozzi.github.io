@@ -12,6 +12,7 @@ export const Nav = styled.div`
 
   display: flex;
   align-items: center;
+  text-align: center;
   justify-content: space-between;
 
   font-weight: bold;
