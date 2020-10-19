@@ -7,8 +7,8 @@ export const Nav = styled.div`
   top: 0;
   width: 100%;
 
-  background-color: #6a2c70;
-  color: #eeecda;
+  background-color: #14274e;
+  color: #ffffff;
 
   display: flex;
   align-items: center;
@@ -23,5 +23,5 @@ export const Nav = styled.div`
     color: inherit;
   }
 
-  z-index: 9999;
+  z-index: 1;
 `;

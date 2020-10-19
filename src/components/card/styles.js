@@ -13,12 +13,34 @@ export const Content = styled.div`
     border-radius: 10px;
     border-style: solid;
     border-width: 1px;
-    border-color: #f08a5d;
+    border-color: #394867;
 
     box-shadow: 1px 1px grey;
   }
 
   .card-details {
+    position: fixed;
+    z-index: 1;
+
+    left: 0;
+    top: 100px;
+    width: 80%;
+    min-width: 300px;
+    height: 80%;
+
+    overflow: auto;
+
+    background-color: #14274e;
+    border-radius: 10px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #394867;
+
+    box-shadow: 1px 1px grey;
+  }
+
+  .close-button {
+    float: right;
   }
 
   .title {
@@ -53,8 +75,8 @@ export const Content = styled.div`
     border-radius: 4px;
 
     padding: 1px 5px 2px 5px;
-    background-color: #6a2c70;
-    color: #eeecda;
+    background-color: #ffffff;
+    color: #14274e;
 
     cursor: pointer;
   }

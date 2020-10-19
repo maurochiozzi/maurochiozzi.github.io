@@ -9,8 +9,8 @@ export const Content = styled.div`
 
   .highlight {
     font-weight: bold;
-    color: #eeecda;
-    background: #b83b5e;
+    color: #ffffff;
+    background: #394867;
     padding: 0px 1px 2px 1px;
   }
 

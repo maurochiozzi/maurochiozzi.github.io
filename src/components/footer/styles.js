@@ -5,8 +5,9 @@ export const Footer = styled.div`
   left: 0;
   bottom: 0;
   width: 100%;
-  background-color: #6a2c70;
-  color: #eeecda;
+
+  background-color: #14274e;
+  color: #ffffff;
 
   height: 50px;
 

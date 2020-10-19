@@ -4,7 +4,7 @@ export const Content = styled.div`
   .main-content {
     position: relative;
 
-    background-color: #eeecda;
+    background-color: #14274e;
 
     margin-top: 30%;
     margin-left: 10%;

@@ -6,9 +6,7 @@ export function Card(props) {
   const [showDetails, setShowDetails] = useState(false);
 
   const handleDetails = () => {
-    setShowDetails((showDetails) => true);
-
-    console.log(showDetails);
+    setShowDetails((showDetails) => !showDetails);
   };
 
   return (
@@ -22,7 +20,19 @@ export function Card(props) {
         <div className="button">Learn More</div>
       </div>
 
-      {showDetails && <div className="card-details">Yolo</div>}
+      {showDetails && (
+        <div className="card-details">
+          <span className="close-button" onClick={handleDetails}>
+            Close Button
+          </span>
+          <div className="title">{props.title}</div>
+          <div>Carrousel</div>
+          <div>Text</div>
+          <div className="button" onClick={handleDetails}>
+            Back
+          </div>
+        </div>
+      )}
     </Content>
   );
 }
