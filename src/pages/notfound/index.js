@@ -28,9 +28,7 @@ export default function NotFound() {
           worries, maybe the content you were looking for was misspelt or it
           just unavailable, or may be moved away.
         </p>
-        <Link to="/" type="button">
-          Go back to safety
-        </Link>
+        <Link to="/">Go back to safety</Link>
       </div>
     </Content>
   );
