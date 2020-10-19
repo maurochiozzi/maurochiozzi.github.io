@@ -10,7 +10,7 @@ export const Content = styled.div`
   .highlight {
     font-weight: bold;
     color: #ffffff;
-    background: #394867;
+    background: #14274e;
     padding: 0px 1px 2px 1px;
   }
 
