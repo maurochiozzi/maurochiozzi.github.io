@@ -9,10 +9,9 @@ export const CardBox = styled.div`
 
   text-align: left;
 
-  border-radius: 10px;
-  border-style: solid;
-  border-width: 1px;
-  border-color: #14274e;
+  border-radius: 15px;
+
+  box-shadow: 1px 1px 1px 1px #14274e;
 
   .title {
     height: 40px;
@@ -67,10 +66,8 @@ export const Modal = styled.div`
   overflow: auto;
 
   background-color: #ffffff;
-  border-radius: 10px;
-  border-style: solid;
-  border-width: 1px;
-  border-color: #14274e;
+  border-radius: 15px;
+  box-shadow: 1px 1px 1px 1px #14274e;
 
   .close-button {
     float: right;
