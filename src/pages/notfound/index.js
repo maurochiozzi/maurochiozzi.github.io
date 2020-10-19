@@ -1,15 +1,26 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 
-import { Content } from "./styles";
+import { Content, Background } from "./styles";
 
 import { Link } from "react-router-dom";
 
 import notfound from "../../assets/images/notfound.jpg";
 
 export default function NotFound() {
+  const [offset, setOffset] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      if (offset > window.innerWidth - 3840) {
+        setOffset((offset) => offset - 1);
+      }
+    }, 5);
+    return () => clearInterval(interval);
+  }, [offset]);
+
   return (
     <Content>
-      <img className="background" src={notfound} alt="Mario World" />
+      <Background x_offset={offset} src={notfound} alt="Mario World" />
       <div className="main-content">
         <h1>Ooops! Page not found, Error 404 </h1>
         <p>

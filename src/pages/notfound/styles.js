@@ -17,17 +17,17 @@ export const Content = styled.div`
     border-radius: 12px;
   }
 
-  .background {
-    padding-bottom: 50px;
-    position: fixed;
-    bottom: 0;
-    left: 0;
-  }
-
   a {
     padding: 0 10px;
     text-decoration: none;
 
     color: inherit;
   }
+`;
+
+export const Background = styled.img`
+  padding-bottom: 50px;
+  position: fixed;
+  bottom: 0;
+  left: ${(props) => props.x_offset}px;
 `;
