@@ -1,6 +1,6 @@
 import React from "react";
 
-import { BrowserRouter, Switch, Route } from "react-router-dom";
+import { HashRouter, Switch, Route } from "react-router-dom";
 
 import "./App.css";
 
@@ -14,20 +14,20 @@ import NotFound from "./pages/notfound";
 
 function App() {
   return (
-    <BrowserRouter>
+    <HashRouter basename="/">
       <Bar />
 
       <div className="app-main-content">
         <Switch>
-          <Route path="/me/" exact component={Home} />
-          <Route path="/me/about" component={About} />
-          <Route path="/me/projects" component={Projects} />
+          <Route path="/" exact component={Home} />
+          <Route path="/about" component={About} />
+          <Route path="/projects" component={Projects} />
           <Route path="*" component={NotFound} />
         </Switch>
       </div>
 
       <Footer />
-    </BrowserRouter>
+    </HashRouter>
   );
 }
 

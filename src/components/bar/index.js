@@ -7,9 +7,9 @@ import { Nav } from "./styles";
 export default function Bar() {
   return (
     <Nav>
-      <Link to="/me/">mChiozzi</Link>
-      <Link to="/me/about">About</Link>
-      <Link to="/me/projects">Awesome Projects</Link>
+      <Link to="/">mChiozzi</Link>
+      <Link to="/about">About</Link>
+      <Link to="/projects">Awesome Projects</Link>
     </Nav>
   );
 }
