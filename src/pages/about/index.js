@@ -35,14 +35,18 @@ export default function About() {
           I've Bachelor degree in Science and Technology with emphasis on
           Mechanic Technologist, and also Mechanical Engineering Graduation,
           both by{" "}
-          <a href="https://www.ufrn.br/en">
+          <a
+            href="https://www.ufrn.br/en"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             Federal University of Rio Grande do Norte
           </a>
           .
         </p>
         <p>
           If you want, you can download my{" "}
-          <a href={Resume} target="_blank">
+          <a href={Resume} target="_blank" rel="noopener noreferrer">
             <span className="highlight">[resume here]</span>
           </a>
           , or find it in the bottom-left among the{" "}
