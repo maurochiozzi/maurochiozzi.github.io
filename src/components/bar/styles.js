@@ -7,8 +7,8 @@ export const Nav = styled.div`
   top: 0;
   width: 100%;
 
-  background-color: grey;
-  color: white;
+  background-color: #6a2c70;
+  color: #eeecda;
 
   display: flex;
   align-items: center;
