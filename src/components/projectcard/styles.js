@@ -74,13 +74,34 @@ export const Modal = styled.div`
 
   .close-button {
     float: right;
-    padding: 20px;
+    padding: 20px 20px 0 0;
   }
 
   .title {
     height: 40px;
-    padding: 10px 10px 0px 25px;
+    padding: 10px 10px 0px 15px;
     text-align: left;
+  }
+
+  .text-body {
+    text-align: justify;
+    margin: 10px;
+  }
+
+  .carousel {
+    .slide {
+      img {
+        height: 500px;
+        min-width: 300px;
+        width: auto;
+      }
+      background-color: white;
+    }
+
+    .legend {
+      background-color: #14274e;
+      font: inherit;
+    }
   }
 
   .button {
