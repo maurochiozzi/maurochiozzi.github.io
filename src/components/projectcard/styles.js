@@ -9,7 +9,7 @@ export const CardBox = styled.div`
 
   text-align: left;
 
-  border-radius: 15px;
+  border-radius: 2px;
 
   box-shadow: 1px 1px 1px 1px #b3b3b3;
 
@@ -61,13 +61,14 @@ export const Modal = styled.div`
 
   width: 80%;
   min-width: 300px;
+  max-width: 800px;
 
   height: 80%;
 
   overflow: auto;
 
   background-color: #ffffff;
-  border-radius: 15px;
+  border-radius: 2;
   box-shadow: 1px 1px 1px 1px #b3b3b3;
 
   .close-button {

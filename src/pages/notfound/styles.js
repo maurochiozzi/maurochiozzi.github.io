@@ -15,7 +15,7 @@ export const Content = styled.div`
 
     padding: 15px;
 
-    border-radius: 12px;
+    border-radius: 2px;
   }
 
   a {
