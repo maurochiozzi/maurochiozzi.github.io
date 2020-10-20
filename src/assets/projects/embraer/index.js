@@ -2,7 +2,7 @@ export const Embraer = {
   id: 2,
   title: "Internship: Embraer",
   caption: "Internship with the Embraer Quality Engineering Team.",
-  thumbnail: "",
+  thumbnail: require("./tmb.jpg"),
   text: [
     "Besides being the second internship during graduation, Embraer Internship was the first contact with the industry and either with the Quality Culture.",
     "During the internship program, a lot of projects were developed, going through process automation using Python, Web/SAP scrapping, to process management improvements using web development.",
@@ -12,5 +12,14 @@ export const Embraer = {
   source: "https://embraer.com/global/en",
   key_developers: ["Mauro Chiozzi"],
   tools: ["Python", "SAP Script", "Quality Tools"],
-  pictures: [],
+  pictures: [
+    {
+      id: 1,
+      src: require("./embraer-1.JPG"),
+    },
+    {
+      id: 2,
+      src: require("./embraer-2.JPG"),
+    },
+  ],
 };
