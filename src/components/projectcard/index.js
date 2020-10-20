@@ -46,7 +46,7 @@ export function ProjectCard(props) {
               {project.pictures.map((picture) => (
                 <div key={picture.id}>
                   <img src={picture.src} alt="testing" />
-                  <p className="legend">{picture.legend}</p>
+                  {picture.legend && <p className="legend">{picture.legend}</p>}
                 </div>
               ))}
             </Carousel>
@@ -57,6 +57,14 @@ export function ProjectCard(props) {
               <p key={paragraph}>{paragraph}</p>
             ))}
           </div>
+
+          {project.source ? (
+            <a href={project.source} target="_blank" rel="noopener noreferrer">
+              Source
+            </a>
+          ) : (
+            <p>No source available for this project.</p>
+          )}
 
           <div>
             <p>Main tools/technologies: {project.tools.join(", ")}.</p>

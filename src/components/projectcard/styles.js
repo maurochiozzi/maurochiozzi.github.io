@@ -117,4 +117,17 @@ export const Modal = styled.div`
 
     cursor: pointer;
   }
+
+  a {
+    height: 23px;
+
+    text-decoration: none;
+    color: inherit;
+
+    border-radius: 4px;
+
+    padding: 1px 5px 2px 5px;
+    background-color: #14274e;
+    color: #ffffff;
+  }
 `;
