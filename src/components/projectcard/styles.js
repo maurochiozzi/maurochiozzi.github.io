@@ -28,11 +28,12 @@ export const CardBox = styled.div`
   }
 
   .caption {
-    height: 80px;
-    padding-left: 15px;
+    height: 100px;
+    padding: 5px;
+    text-align: left;
+    font-size: 16px;
 
-    margin-top: 5px;
-    margin-bottom: 5px;
+    margin-bottom: 0px;
   }
 
   .button {

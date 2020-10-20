@@ -17,8 +17,8 @@ export const Content = styled.div`
     margin-left: auto;
     margin-right: auto;
     max-width: 500px;
-    font-size: 18px;
-    margin-bottom: 50px;
+    font-size: 16px;
+    margin-bottom: 20px;
   }
 
   .wrapper {
