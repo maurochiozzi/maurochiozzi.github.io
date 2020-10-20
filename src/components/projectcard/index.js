@@ -54,7 +54,7 @@ export function ProjectCard(props) {
 
           <div className="text-body">
             {project.text.map((paragraph) => (
-              <p>{paragraph}</p>
+              <p key={paragraph}>{paragraph}</p>
             ))}
           </div>
 
