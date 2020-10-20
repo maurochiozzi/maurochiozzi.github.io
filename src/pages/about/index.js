@@ -53,7 +53,7 @@ export default function About() {
           <span className="highlight">[social networks]</span> links and{" "}
           <span className="highlight">[e-mail]</span> for contact. For some
           projects developed by myself, checkout the{" "}
-          <Link to="/me/projects">
+          <Link to="/projects">
             <span className="highlight">[Projects Portfolio]</span>
           </Link>{" "}
           page.
