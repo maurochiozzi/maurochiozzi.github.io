@@ -11,7 +11,7 @@ export const CardBox = styled.div`
 
   border-radius: 15px;
 
-  box-shadow: 1px 1px 1px 1px #14274e;
+  box-shadow: 1px 1px 1px 1px grey;
 
   .title {
     height: 40px;
