@@ -11,7 +11,7 @@ export const CardBox = styled.div`
 
   border-radius: 15px;
 
-  box-shadow: 1px 1px 1px 1px grey;
+  box-shadow: 1px 1px 1px 1px #b3b3b3;
 
   .title {
     height: 40px;
@@ -68,7 +68,7 @@ export const Modal = styled.div`
 
   background-color: #ffffff;
   border-radius: 15px;
-  box-shadow: 1px 1px 1px 1px #14274e;
+  box-shadow: 1px 1px 1px 1px #b3b3b3;
 
   .close-button {
     float: right;
@@ -107,7 +107,7 @@ export const Modal = styled.div`
     float: right;
 
     margin-right: 15px;
-    margin-bottom: 0px;
+    margin-bottom: 20px;
 
     border-radius: 4px;
 

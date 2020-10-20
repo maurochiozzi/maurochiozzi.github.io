@@ -60,5 +60,10 @@ export const Loadcell = {
       legend: "PCB finished after components soldering",
       src: require("./loadcell-9.jpg"),
     },
+    {
+      id: 10,
+      legend: "Data acquisition outputs from each one of the 6 channels ",
+      src: require("./loadcell-10.png"),
+    },
   ],
 };
