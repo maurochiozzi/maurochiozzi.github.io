@@ -66,7 +66,7 @@ export const Modal = styled.div`
   min-width: 300px;
   max-width: 800px;
 
-  height: 80%;
+  max-height: 80%;
 
   overflow: auto;
 

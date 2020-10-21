@@ -63,7 +63,7 @@ export function ProjectCard(props) {
               Source
             </a>
           ) : (
-            <p>No source available for this project.</p>
+            <p>No source is available for this project.</p>
           )}
 
           <div>

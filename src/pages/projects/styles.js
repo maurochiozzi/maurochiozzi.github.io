@@ -7,6 +7,8 @@ export const Content = styled.div`
 
   text-align: center;
 
+  max-width: 1400px;
+
   .title {
     font-size: 26px;
     font-weight: bold;

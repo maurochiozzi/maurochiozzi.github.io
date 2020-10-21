@@ -12,7 +12,7 @@ import Home from "./pages/home";
 import Projects from "./pages/projects";
 import NotFound from "./pages/notfound";
 
-function App() {
+export default function App() {
   return (
     <HashRouter basename="/">
       <Bar />
@@ -30,5 +30,3 @@ function App() {
     </HashRouter>
   );
 }
-
-export default App;
