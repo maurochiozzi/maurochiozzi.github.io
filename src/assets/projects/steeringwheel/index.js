@@ -1,4 +1,4 @@
-export const Steeringwheel = {
+export const steeringwheel = {
   id: 4,
   title: "CK Steering Wheel",
   caption:

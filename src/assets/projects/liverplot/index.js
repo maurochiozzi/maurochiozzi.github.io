@@ -1,4 +1,4 @@
-export const Liverplot = {
+export const liverplot = {
   id: 7,
   title: "LiverPlot",
   caption:

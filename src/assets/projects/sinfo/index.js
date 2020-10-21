@@ -1,4 +1,4 @@
-export const Sinfo = {
+export const sinfo = {
   id: 3,
   title: "Intership: SINFO",
   caption: "SINFO Internship as Software Developer with Team Orbitais.",

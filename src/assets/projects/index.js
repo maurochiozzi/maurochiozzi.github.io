@@ -1,19 +1,25 @@
-import { Loadcell } from "./loadcell";
-import { Embraer } from "./embraer";
-import { Sinfo } from "./sinfo";
-import { Steeringwheel } from "./steeringwheel";
-import { Portfolio } from "./portfolio";
-import { Telemetry } from "./telemetry";
-import { Seriuslogger } from "./seriuslogger";
-import { Liverplot } from "./liverplot";
+import { loadcell } from "./loadcell";
+import { embraer } from "./embraer";
+import { sinfo } from "./sinfo";
+import { steeringwheel } from "./steeringwheel";
+import { portfolio } from "./portfolio";
+import { telemetry } from "./telemetry";
+import { seriuslogger } from "./seriuslogger";
+import { liverplot } from "./liverplot";
+import { centralized } from "./centralized";
+import { distributed } from "./distributed";
+import { aero_distributed } from "./aerodistributed";
 
 export const ProjectsData = [
-  Loadcell,
-  Embraer,
-  Sinfo,
-  Steeringwheel,
-  Portfolio,
-  Telemetry,
-  Seriuslogger,
-  Liverplot,
+  loadcell,
+  embraer,
+  sinfo,
+  steeringwheel,
+  portfolio,
+  telemetry,
+  seriuslogger,
+  liverplot,
+  centralized,
+  distributed,
+  aero_distributed,
 ];

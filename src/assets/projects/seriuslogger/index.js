@@ -1,4 +1,4 @@
-export const Seriuslogger = {
+export const seriuslogger = {
   id: 6,
   title: "SeriusLogger",
   caption: "Serius datalogger for times when things get serious... Or not.",

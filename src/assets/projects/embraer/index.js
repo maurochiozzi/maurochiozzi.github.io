@@ -1,4 +1,4 @@
-export const Embraer = {
+export const embraer = {
   id: 2,
   title: "Internship: Embraer",
   caption: "Internship with the Embraer Quality Engineering Team.",

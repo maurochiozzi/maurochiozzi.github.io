@@ -1,4 +1,4 @@
-export const Portfolio = {
+export const portfolio = {
   id: 5,
   title: "This Portfolio",
   caption: "An awesome web application to show my projects to the world :D",

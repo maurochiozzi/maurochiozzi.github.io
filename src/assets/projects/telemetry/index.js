@@ -1,4 +1,4 @@
-export const Telemetry = {
+export const telemetry = {
   id: 8,
   title: "CK Telemetry",
   caption: "A Java-based desktop application for real time data visualization.",

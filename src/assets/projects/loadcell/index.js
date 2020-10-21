@@ -1,4 +1,4 @@
-export const Loadcell = {
+export const loadcell = {
   id: 1,
   title: "Multi-axis Loadcell",
   caption:
