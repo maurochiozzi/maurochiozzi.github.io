@@ -18,7 +18,7 @@ export const CardBox = styled.div`
 
   .title {
     height: 40px;
-    padding: 5px 0px 5px 15px;
+    padding: 5px;
     margin: 0px;
   }
 
@@ -81,12 +81,12 @@ export const Modal = styled.div`
 
   .close-button {
     float: right;
-    padding: 20px 20px 0 0;
+    padding: 17px 10px 0 0;
   }
 
   .title {
     height: 40px;
-    padding: 10px 10px 0px 15px;
+    padding: 5px;
     text-align: left;
   }
 

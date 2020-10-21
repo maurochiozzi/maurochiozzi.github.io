@@ -9,6 +9,7 @@ import { liverplot } from "./liverplot";
 import { centralized } from "./centralized";
 import { distributed } from "./distributed";
 import { aero_distributed } from "./aerodistributed";
+import { sevenvelo } from "./sevenvelo";
 
 export const ProjectsData = [
   loadcell,
@@ -22,4 +23,5 @@ export const ProjectsData = [
   centralized,
   distributed,
   aero_distributed,
+  sevenvelo,
 ];

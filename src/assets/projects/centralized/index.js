@@ -1,13 +1,19 @@
 export const centralized = {
   id: 9,
-  title: "CK Centralized System",
+  title: "Centralized E-System",
   caption:
     "A centralized embedded system to acquire data from Car-Kará Baja SAE Team and display on real time data to pilot.",
   thumbnail: require("./tmb.jpg"),
   text: [""],
   source: "",
   key_developers: ["Mauro Chiozzi"],
-  tools: ["Arduino", "Mega", "Embedded C", "Proteus Iris & Ares", "SolidWorks"],
+  tools: [
+    "Arduino",
+    "Mega 2560",
+    "Embedded C",
+    "Proteus Iris & Ares",
+    "SolidWorks",
+  ],
   pictures: [
     {
       id: 1,

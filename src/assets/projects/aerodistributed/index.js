@@ -1,6 +1,6 @@
 export const aero_distributed = {
   id: 9,
-  title: "CK AeroDesign System",
+  title: "AeroDesign E-System",
   caption:
     "A distributed embedded system to acquire data from Car-Kará AeroDesign SAE Team and display on real time data to box Team.",
   thumbnail: require("./tmb.jpg"),
@@ -9,7 +9,6 @@ export const aero_distributed = {
   key_developers: ["Mauro Chiozzi"],
   tools: [
     "Embedded C",
-    "CAN Network",
     "RF Communication",
     "GPS",
     "I2C",
