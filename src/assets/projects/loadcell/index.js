@@ -13,7 +13,7 @@ export const loadcell = {
   ],
   source: "http://monografias.ufrn.br/handle/123456789/10689",
   key_developers: ["Mauro Chiozzi"],
-  tools: ["Ansys", "SolidWorks", "Proteus Ares & Iris", "Embedded C", "Python"],
+  tools: ["Ansys", "SolidWorks", "Proteus Iris & Ares", "Embedded C", "Python"],
   pictures: [
     {
       id: 1,

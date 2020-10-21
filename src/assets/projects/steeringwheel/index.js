@@ -7,7 +7,14 @@ export const steeringwheel = {
   text: [""],
   source: "",
   key_developers: ["Mauro Chiozzi"],
-  tools: ["Carbon Fiber", "TFT", "CAN", "CNC", "SolidWorks", "Proteus"],
+  tools: [
+    "Carbon Fiber",
+    "TFT",
+    "CAN",
+    "CNC",
+    "SolidWorks",
+    "Proteus Iris & Ares",
+  ],
   pictures: [
     {
       id: 1,

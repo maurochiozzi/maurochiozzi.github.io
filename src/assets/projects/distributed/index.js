@@ -15,11 +15,5 @@ export const distributed = {
     "Proteus Iris & Ares",
     "SolidWorks",
   ],
-  pictures: [
-    // {
-    //   id: 1,
-    //   src: require("./ckt-1.png"),
-    //   legend: "CK Telemetry on Baja SAE application",
-    // },
-  ],
+  pictures: [],
 };

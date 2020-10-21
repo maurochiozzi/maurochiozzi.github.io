@@ -12,6 +12,7 @@ export const aero_distributed = {
     "CAN Network",
     "RF Communication",
     "GPS",
+    "I2C",
     "Proteus Iris & Ares",
     "SolidWorks",
   ],
