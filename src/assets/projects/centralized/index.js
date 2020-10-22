@@ -2,7 +2,7 @@ export const centralized = {
   id: 9,
   title: "Centralized E-System",
   caption:
-    "A centralized embedded system to acquire data from Car-Kará Baja SAE Team and display on real time data to pilot.",
+    "A centralized embedded system to acquire data from our Baja prototype and display on real time data to pilot.",
   thumbnail: require("./tmb.jpg"),
   text: [""],
   source: "",

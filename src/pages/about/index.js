@@ -4,11 +4,14 @@ import { Link } from "react-router-dom";
 
 import { Content } from "./styles";
 
+import Profile from "../../components/profile";
 import Resume from "../../assets/files/mChiozzi.pdf";
 
 export default function About() {
   return (
     <Content>
+      <Profile />
+      <div className="picture"></div>
       <div className="title">
         <p>Hello, there! I'm Mauro Chiozzi!</p>
       </div>
@@ -32,9 +35,8 @@ export default function About() {
         </p>
         <hr />
         <p>
-          I've Bachelor degree in Science and Technology with emphasis on
-          Mechanic Technologist, and also Mechanical Engineering Graduation,
-          both by{" "}
+          I've Bachelor degree in Science & Technology, with emphasis on
+          Mechanic Technologist, and also Mechanical Engineering degree, both by{" "}
           <a
             href="https://www.ufrn.br/en"
             target="_blank"
@@ -54,7 +56,7 @@ export default function About() {
           <span className="highlight">[e-mail]</span> for contact. For some
           projects developed by myself, checkout the{" "}
           <Link to="/projects">
-            <span className="highlight">[Projects Portfolio]</span>
+            <span className="highlight">[projects portfolio]</span>
           </Link>{" "}
           page.
         </p>

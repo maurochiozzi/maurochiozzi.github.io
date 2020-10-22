@@ -1,6 +1,6 @@
 export const steeringwheel = {
   id: 4,
-  title: "CK Steering Wheel",
+  title: "Steering Wheel",
   caption:
     "Carbon fiber steering wheel with embedded dashboard for comfort during the curves and agility during data visualization.",
   thumbnail: require("./tmb.jpg"),

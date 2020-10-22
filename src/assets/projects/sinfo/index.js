@@ -1,6 +1,6 @@
 export const sinfo = {
   id: 3,
-  title: "Intership: SINFO",
+  title: "Internship: SINFO",
   caption: "SINFO Internship as Software Developer with Team Orbitais.",
   thumbnail: require("./tmb.png"),
   text: [

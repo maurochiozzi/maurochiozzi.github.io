@@ -6,10 +6,10 @@ export const loadcell = {
   thumbnail: require("./tmb.jpg"),
   text: [
     "This project had as a goal the development of multi-axis loadcell for the Car-Kará AeroDesign SAE Team (UFRN) could use it in different applications. However, this development covers only the first part of the project development: elastic element geometry selection and embedded data acquisition development.",
-    "To do so, all kinds of applications where mapped with their respective boundary conditions. After prioritizing loadcell applications, the development started by selecting the geometry for the elastic element that would allow the acquisition of the loads applied in X, Y, Z axis (forces and momentums), and furthermore simulations using Ansys for mechanical analysis under boundary conditions.",
+    "To do so, all kinds of applications where mapped with their respective boundary conditions. After prioritizing loadcell applications, the development started by selecting the geometry for the elastic element that would allow the acquisition of the loads applied in X, Y and Z-axis (forces and momentums), and furthermore simulations using Ansys for mechanical analysis under boundary conditions.",
     "After the validation of the geometry, the circuit schematic design and simulation started using Proteus Iris, and then Proteus Ares for PCB design in accordance with the loadcell geometry. ",
     "The PCB was manufactured in China, by one of Team's sponsor, but the components were soldered in our lab. Results after finishing process and coding validation can be seen on the pictures above.",
-    "This first part of the development was the final essay in order to obtain Mechanical Engineer Degree, and the full document (Portuguese) can be accessed using the source provided below.",
+    "This first part of the development was the final essay in order to obtain Mechanical Engineer degree, and the full thesis (Portuguese) can be accessed using the source provided below.",
   ],
   source: "http://monografias.ufrn.br/handle/123456789/10689",
   key_developers: ["Mauro Chiozzi"],
