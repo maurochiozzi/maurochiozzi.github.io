@@ -19,7 +19,7 @@ export default function About() {
         <p>
           I'm Mechanical <span className="highlight">[Engineer]</span> and
           passionate for overall engineering, and I might say it's because all
-          my creative developed as a child during my joyful plays with{" "}
+          my creative developed as a child during my joyful days playing with{" "}
           <span className="highlight">[Lego]</span>.
         </p>
         <p>

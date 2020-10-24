@@ -6,6 +6,6 @@ export const seriuslogger = {
   text: [""],
   source: "https://github.com/maurochiozzi/seriuslogger",
   key_developers: ["Mauro Chiozzi"],
-  tools: ["Python", "Serial Logger", "Git"],
+  tools: ["Python", "Serial Data Logger", "Git"],
   pictures: [],
 };
