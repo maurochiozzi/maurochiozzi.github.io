@@ -40,9 +40,11 @@ export default function About() {
         <p>
           Later on, after finishing the Bachelor course, I enrolled on the
           Mechanical Engineering course, where I could develop more skills in
-          the area that I'm passionate about. Also, team-development was
-          possible as well as a development in problem-solving with the hard
-          work time active with the{" "}
+          the area that I'm passionate about. Also,{" "}
+          <span className="highlight">[team-development]</span> was possible as
+          well as a development in{" "}
+          <span className="highlight">[problem-solving]</span> with the
+          <span className="highlight">[hard work]</span> time active with the{" "}
           <span className="highlight">[Car-Kará]</span> Baja SAE and AeroDesign
           SAE <span className="highlight">[Teams]</span>.
         </p>
