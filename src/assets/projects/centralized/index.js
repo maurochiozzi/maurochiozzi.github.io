@@ -30,5 +30,10 @@ export const centralized = {
       src: require("./ck-3.jpg"),
       legend: "Embedded system final assembly",
     },
+    {
+      id: 4,
+      src: require("./ck-4.jpeg"),
+      legend: "Centralized system upgrade, 2 years later",
+    },
   ],
 };

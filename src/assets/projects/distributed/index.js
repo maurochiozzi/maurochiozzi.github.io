@@ -15,5 +15,17 @@ export const distributed = {
     "Proteus Iris & Ares",
     "SolidWorks",
   ],
-  pictures: [],
+  pictures: [
+    {
+      id: 1,
+      src: require("./ck-1.png"),
+      legend:
+        "Electronic Control Units over the car, and harness connecting then",
+    },
+    {
+      id: 2,
+      src: require("./ck-2.jpeg"),
+      legend: "Some PCBs from the distributed system",
+    },
+  ],
 };
