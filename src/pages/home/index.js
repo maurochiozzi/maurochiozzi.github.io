@@ -1,10 +1,16 @@
-import React from "react";
+import React, { useEffect } from "react";
 
 import Window from "../../assets/images/window.JPG";
 
 import { Content } from "./styles";
 
+import ReactGA from "react-ga";
+
 export default function Home() {
+  useEffect(() => {
+    ReactGA.pageview("/home");
+  }, []);
+
   return (
     <Content>
       <div className="content-row">

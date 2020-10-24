@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import ReactGA from "react-ga";
 
 import { Content, Background } from "./styles";
 
@@ -17,6 +18,11 @@ export default function NotFound() {
     }, 5);
     return () => clearInterval(interval);
   }, [offset]);
+
+  ReactGA.event({
+    category: "Error 404",
+    action: "User tried to access wrong path",
+  });
 
   return (
     <Content>

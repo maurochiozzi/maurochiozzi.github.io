@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 
 import { HashRouter, Switch, Route } from "react-router-dom";
 
@@ -12,7 +12,14 @@ import Home from "./pages/home";
 import Projects from "./pages/projects";
 import NotFound from "./pages/notfound";
 
+import ReactGA from "react-ga";
+
 export default function App() {
+  useEffect(() => {
+    ReactGA.initialize("G-VXQFQJF6VJ");
+    ReactGA.pageview("/");
+  }, []);
+
   return (
     <HashRouter basename="/">
       <Bar />
