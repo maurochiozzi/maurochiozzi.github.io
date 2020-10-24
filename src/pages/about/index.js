@@ -23,7 +23,7 @@ export default function About() {
           <span className="highlight">[Lego]</span>.
         </p>
         <p>
-          To keep fill-fulling my need for creative, I enrolled on{" "}
+          To keep on filling my creativity, I enrolled on{" "}
           <a
             href="https://www.ufrn.br/en"
             target="_blank"
