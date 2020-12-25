@@ -2,8 +2,6 @@ import styled from "styled-components";
 
 export const Content = styled.div`
   .main-content {
-    position: relative;
-
     background-color: #14274e;
     color: white;
 
@@ -31,4 +29,6 @@ export const Background = styled.img`
   position: fixed;
   bottom: 0;
   left: ${(props) => props.x_offset}px;
+
+  z-index: -1;
 `;
