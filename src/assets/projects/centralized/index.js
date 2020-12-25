@@ -1,5 +1,5 @@
 export const centralized = {
-  id: 9,
+  id: 10,
   title: "Centralized E-System",
   caption:
     "A centralized embedded system to acquire data from our Baja prototype and display on real-time data to pilot.",

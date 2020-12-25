@@ -1,5 +1,5 @@
 export const telemetry = {
-  id: 8,
+  id: 6,
   title: "CK Telemetry",
   caption: "A Java-based desktop application for real-time data visualization.",
   thumbnail: require("./tmb.png"),

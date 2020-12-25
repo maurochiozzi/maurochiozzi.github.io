@@ -1,5 +1,5 @@
 export const distributed = {
-  id: 9,
+  id: 5,
   title: "Distributed E-System",
   caption:
     "A distributed embedded system to acquire data from our Baja prototype and display on real-time data to pilot and box Team.",
