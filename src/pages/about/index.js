@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 
 import { Link } from "react-router-dom";
 
@@ -8,6 +8,13 @@ import Profile from "../../components/profile";
 import Resume from "../../assets/files/mChiozzi.pdf";
 
 export default function About() {
+  useEffect(() => {
+    window.gtag("config", "G-VXQFQJF6VJ", {
+      page_title: "about",
+      page_path: "/about",
+    });
+  }, []);
+
   return (
     <Content>
       <Profile />

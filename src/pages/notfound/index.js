@@ -19,10 +19,12 @@ export default function NotFound() {
     return () => clearInterval(interval);
   }, [offset]);
 
-  ReactGA.event({
-    category: "Error 404",
-    action: "User tried to access wrong path",
-  });
+  useEffect(() => {
+    window.gtag("config", "G-VXQFQJF6VJ", {
+      page_title: "404-error",
+      page_path: "/404-error",
+    });
+  }, []);
 
   return (
     <Content>
