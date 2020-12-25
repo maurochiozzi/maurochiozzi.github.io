@@ -1,6 +1,6 @@
-import React, { useEffect } from "react";
+import React from "react";
 
-import Window from "../../assets/images/window.JPG";
+import Window from "../../assets/images/window.jpg";
 
 import { Content } from "./styles";
 

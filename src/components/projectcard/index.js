@@ -14,6 +14,13 @@ export function ProjectCard(props) {
 
   const handleDetails = () => {
     setShowDetails((showDetails) => !showDetails);
+
+    if (showDetails) {
+      window.gtag("config", "G-VXQFQJF6VJ", {
+        page_title: project.title,
+        page_path: "/projects/" + project.title,
+      });
+    }
   };
 
   return (
