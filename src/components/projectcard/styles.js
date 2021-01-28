@@ -109,6 +109,18 @@ export const Modal = styled.div`
       background-color: #14274e;
       font: inherit;
     }
+
+    .control-prev::before {
+      border-right: 8px solid #14274e;
+    }
+
+    .control-next::before {
+      border-left: 8px solid #14274e;
+    }
+
+    .dot {
+      background: #14274e;
+    }
   }
 
   .button {

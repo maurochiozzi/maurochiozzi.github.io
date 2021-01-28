@@ -1,8 +1,9 @@
 import React, { useState } from "react";
 
 import { CardBox, Modal } from "./styles";
+import { ClickAwayListener } from "@material-ui/core";
 
-import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
+import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from "react-responsive-carousel";
 
 import { FaTimesCircle } from "react-icons/fa";
@@ -13,7 +14,7 @@ export function ProjectCard(props) {
   const project = props.project;
 
   const handleDetails = () => {
-    setShowDetails((showDetails) => !showDetails);
+    setShowDetails(true);
 
     if (showDetails) {
       process.env.NODE_ENV !== "development" &&
@@ -22,6 +23,12 @@ export function ProjectCard(props) {
           page_path: "/projects/" + project.title,
         });
     }
+  };
+
+  const handleClose = () => {
+    setTimeout(() => {
+      setShowDetails(false);
+    }, 20);
   };
 
   return (
@@ -38,49 +45,57 @@ export function ProjectCard(props) {
       </CardBox>
 
       {showDetails && (
-        <Modal>
-          <span className="close-button" onClick={handleDetails}>
-            <FaTimesCircle />
-          </span>
-          <div className="title">{project.title}</div>
+        <ClickAwayListener onClickAway={handleClose}>
+          <Modal>
+            <span className="close-button" onClick={handleClose}>
+              <FaTimesCircle />
+            </span>
+            <div className="title">{project.title}</div>
 
-          {project.pictures && (
-            <Carousel
-              dynamicHeight
-              infiniteLoop
-              showStatus={false}
-              showThumbs={false}
-            >
-              {project.pictures.map((picture) => (
-                <div key={picture.id}>
-                  <img src={picture.src} alt="testing" />
-                  {picture.legend && <p className="legend">{picture.legend}</p>}
-                </div>
+            {project.pictures && (
+              <Carousel
+                dynamicHeight
+                infiniteLoop
+                showStatus={false}
+                showThumbs={false}
+              >
+                {project.pictures.map((picture) => (
+                  <div key={picture.id}>
+                    <img src={picture.src} alt="testing" />
+                    {picture.legend && (
+                      <p className="legend">{picture.legend}</p>
+                    )}
+                  </div>
+                ))}
+              </Carousel>
+            )}
+
+            <div className="text-body">
+              {project.text.map((paragraph) => (
+                <p key={paragraph}>{paragraph}</p>
               ))}
-            </Carousel>
-          )}
+            </div>
 
-          <div className="text-body">
-            {project.text.map((paragraph) => (
-              <p key={paragraph}>{paragraph}</p>
-            ))}
-          </div>
+            {project.source ? (
+              <a
+                href={project.source}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Source
+              </a>
+            ) : (
+              <p>No source is available for this project.</p>
+            )}
 
-          {project.source ? (
-            <a href={project.source} target="_blank" rel="noopener noreferrer">
-              Source
-            </a>
-          ) : (
-            <p>No source is available for this project.</p>
-          )}
-
-          <div>
-            <p>Main tools/technologies: {project.tools.join(", ")}.</p>
-          </div>
-          <div className="button" onClick={handleDetails}>
-            Back
-          </div>
-        </Modal>
+            <div>
+              <p>Main tools/technologies: {project.tools.join(", ")}.</p>
+            </div>
+            <div className="button" onClick={handleDetails}>
+              Back
+            </div>
+          </Modal>
+        </ClickAwayListener>
       )}
     </React.Fragment>
   );
