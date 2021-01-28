@@ -8,9 +8,11 @@ import notfound from "../../assets/images/notfound.jpg";
 export default function NotFound() {
   const [offset, setOffset] = useState(0);
 
+  const normalized_width = (3840 * window.innerHeight) / 1080;
+
   useEffect(() => {
     const interval = setInterval(() => {
-      if (offset > window.innerWidth - 3840) {
+      if (offset > window.innerWidth - normalized_width) {
         setOffset((offset) => offset - 1);
       }
     }, 5);
@@ -35,6 +37,7 @@ export default function NotFound() {
           worries, maybe the content you were looking for was misspelt or it
           just unavailable, or may be moved away.
         </p>
+        <p>Perhaps you should contact me to report this issue.</p>
         <Link to="/">Go back to safety</Link>
       </div>
     </Content>

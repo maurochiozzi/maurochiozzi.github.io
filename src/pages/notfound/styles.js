@@ -5,7 +5,7 @@ export const Content = styled.div`
     background-color: #14274e;
     color: white;
 
-    margin-top: 30%;
+    margin-top: calc(50px + 10%);
     margin-left: 10%;
     margin-right: 10%;
 
@@ -29,6 +29,8 @@ export const Background = styled.img`
   position: fixed;
   bottom: 0;
   left: ${(props) => props.x_offset}px;
+
+  height: 100%;
 
   z-index: -1;
 `;
