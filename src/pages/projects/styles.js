@@ -18,8 +18,8 @@ export const Content = styled.div`
   .caption {
     margin-left: auto;
     margin-right: auto;
-    max-width: 500px;
-    font-size: 16px;
+    max-width: 600px;
+    font-size: 18px;
     margin-bottom: 20px;
   }
 

@@ -19,8 +19,10 @@ export default function Projects() {
     <Content>
       <div className="title">Awesome Projects!</div>
       <div className="caption">
-        Here you can find some awesome projects developed by Mauro Chiozzi and
-        Team.
+        <p>
+          Here you can find some awesome projects developed by Mauro Chiozzi and
+          Team. Click on then to find out more details!
+        </p>
       </div>
       <div className="wrapper">
         {ProjectsData.map((project) => (
