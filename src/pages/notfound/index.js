@@ -8,20 +8,21 @@ import notfound from "../../assets/images/notfound.jpg";
 export default function NotFound() {
   const [offset, setOffset] = useState(0);
 
-  // useEffect(() => {
-  //   const interval = setInterval(() => {
-  //     if (offset > window.innerWidth - 3840) {
-  //       setOffset((offset) => offset - 1);
-  //     }
-  //   }, 5);
-  //   return () => clearInterval(interval);
-  // }, [offset]);
+  useEffect(() => {
+    const interval = setInterval(() => {
+      if (offset > window.innerWidth - 3840) {
+        setOffset((offset) => offset - 1);
+      }
+    }, 5);
+    return () => clearInterval(interval);
+  }, [offset]);
 
   useEffect(() => {
-    window.gtag("config", "G-VXQFQJF6VJ", {
-      page_title: "404-error",
-      page_path: "/404-error",
-    });
+    process.env.NODE_ENV !== "development" &&
+      window.gtag("config", "G-VXQFQJF6VJ", {
+        page_title: "404-error",
+        page_path: "/404-error",
+      });
   }, []);
 
   return (

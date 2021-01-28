@@ -8,10 +8,11 @@ import { ProjectsData } from "../../assets/projects/";
 
 export default function Projects() {
   useEffect(() => {
-    window.gtag("config", "G-VXQFQJF6VJ", {
-      page_title: "projects",
-      page_path: "/projects",
-    });
+    process.env.NODE_ENV !== "development" &&
+      window.gtag("config", "G-VXQFQJF6VJ", {
+        page_title: "projects",
+        page_path: "/projects",
+      });
   }, []);
 
   return (

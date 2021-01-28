@@ -9,10 +9,11 @@ import Resume from "../../assets/files/mChiozzi.pdf";
 
 export default function About() {
   useEffect(() => {
-    window.gtag("config", "G-VXQFQJF6VJ", {
-      page_title: "about",
-      page_path: "/about",
-    });
+    process.env.NODE_ENV !== "development" &&
+      window.gtag("config", "G-VXQFQJF6VJ", {
+        page_title: "about",
+        page_path: "/about",
+      });
   }, []);
 
   return (

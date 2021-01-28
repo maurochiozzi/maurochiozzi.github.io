@@ -16,10 +16,11 @@ export function ProjectCard(props) {
     setShowDetails((showDetails) => !showDetails);
 
     if (showDetails) {
-      window.gtag("config", "G-VXQFQJF6VJ", {
-        page_title: project.title,
-        page_path: "/projects/" + project.title,
-      });
+      process.env.NODE_ENV !== "development" &&
+        window.gtag("config", "G-VXQFQJF6VJ", {
+          page_title: project.title,
+          page_path: "/projects/" + project.title,
+        });
     }
   };
 
