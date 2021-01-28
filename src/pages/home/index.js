@@ -9,6 +9,9 @@ export default function Home() {
     <Content>
       <div className="content-table">
         <div className="content-row">
+          <div className="picture-content">
+            <img src={Window} alt="Under Construction" width="100%" />
+          </div>
           <div className="main-content">
             <p className="left">
               - <i>Hey!</i> It's me, <b>Mauro!</b>
@@ -18,9 +21,6 @@ export default function Home() {
             <p className="left">
               - Mauro <b>Chiozzi!</b>
             </p>
-          </div>
-          <div className="picture-content">
-            <img src={Window} alt="Under Construction" width="100%" />
           </div>
         </div>
       </div>

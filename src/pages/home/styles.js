@@ -18,11 +18,14 @@ export const Content = styled.div`
   }
 
   .content-row {
+    width: 100%;
+
     display: table-row;
   }
 
   .main-content {
     font-size: calc(10px + 5vmin);
+
     width: 60%;
     padding-left: 10%;
 
@@ -44,13 +47,17 @@ export const Content = styled.div`
   }
 
   .picture-content {
+    margin: auto;
     width: 40%;
-    padding-right: 30px;
+    padding-left: 30px;
+
+    vertical-align: middle;
 
     display: table-cell;
 
     img {
       max-width: 500px;
+      border-radius: 25%;
     }
   }
 
