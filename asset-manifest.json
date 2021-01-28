@@ -1,19 +1,19 @@
 {
   "files": {
     "main.css": "/static/css/main.db519ecc.chunk.css",
-    "main.js": "/static/js/main.d267bdae.chunk.js",
-    "main.js.map": "/static/js/main.d267bdae.chunk.js.map",
+    "main.js": "/static/js/main.de00c996.chunk.js",
+    "main.js.map": "/static/js/main.de00c996.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.6ef29a8f.js",
     "runtime-main.js.map": "/static/js/runtime-main.6ef29a8f.js.map",
     "static/css/2.fb346933.chunk.css": "/static/css/2.fb346933.chunk.css",
-    "static/js/2.3263df91.chunk.js": "/static/js/2.3263df91.chunk.js",
-    "static/js/2.3263df91.chunk.js.map": "/static/js/2.3263df91.chunk.js.map",
+    "static/js/2.e831b034.chunk.js": "/static/js/2.e831b034.chunk.js",
+    "static/js/2.e831b034.chunk.js.map": "/static/js/2.e831b034.chunk.js.map",
     "index.html": "/index.html",
-    "precache-manifest.3b892255cdca0f2433b0e534a2e1a7cc.js": "/precache-manifest.3b892255cdca0f2433b0e534a2e1a7cc.js",
+    "precache-manifest.926dafe296a6b2dfc9131e9b8632fa88.js": "/precache-manifest.926dafe296a6b2dfc9131e9b8632fa88.js",
     "service-worker.js": "/service-worker.js",
     "static/css/2.fb346933.chunk.css.map": "/static/css/2.fb346933.chunk.css.map",
     "static/css/main.db519ecc.chunk.css.map": "/static/css/main.db519ecc.chunk.css.map",
-    "static/js/2.3263df91.chunk.js.LICENSE.txt": "/static/js/2.3263df91.chunk.js.LICENSE.txt",
+    "static/js/2.e831b034.chunk.js.LICENSE.txt": "/static/js/2.e831b034.chunk.js.LICENSE.txt",
     "static/media/7v-1.jpg": "/static/media/7v-1.ab1de412.jpg",
     "static/media/7v-2.PNG": "/static/media/7v-2.db5c56b4.PNG",
     "static/media/7v-3.png": "/static/media/7v-3.3c6bcdfb.png",
@@ -44,7 +44,7 @@
     "static/media/loadcell-7.JPG": "/static/media/loadcell-7.76713cec.JPG",
     "static/media/loadcell-8.jpg": "/static/media/loadcell-8.86223839.jpg",
     "static/media/loadcell-9.jpg": "/static/media/loadcell-9.3bd7906b.jpg",
-    "static/media/mChiozzi.pdf": "/static/media/mChiozzi.ab7d3f03.pdf",
+    "static/media/mChiozzi.pdf": "/static/media/mChiozzi.5c0a8d48.pdf",
     "static/media/notfound.jpg": "/static/media/notfound.4bbd8839.jpg",
     "static/media/profile.jpg": "/static/media/profile.8060957e.jpg",
     "static/media/sw-1.JPG": "/static/media/sw-1.549bd494.JPG",
@@ -57,8 +57,8 @@
   "entrypoints": [
     "static/js/runtime-main.6ef29a8f.js",
     "static/css/2.fb346933.chunk.css",
-    "static/js/2.3263df91.chunk.js",
+    "static/js/2.e831b034.chunk.js",
     "static/css/main.db519ecc.chunk.css",
-    "static/js/main.d267bdae.chunk.js"
+    "static/js/main.de00c996.chunk.js"
   ]
 }
