@@ -29,9 +29,9 @@ export default function Home() {
         <p>
           You may use upper bar for About and also to discover some Awesome
           Projects. <br />
-          Don't forget to follow me on my{" "}
-          <span className="highlight">GitHub</span> and{" "}
-          <span className="highlight">LinkedIn</span> :D
+          Don't forget to follow me on{" "}
+          <span className="highlight">[GitHub]</span> and{" "}
+          <span className="highlight">[LinkedIn]</span> :D
         </p>
         <small>See footer bar for Social Networks</small>
       </div>

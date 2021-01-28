@@ -3,6 +3,8 @@ import styled from "styled-components";
 export const Content = styled.div`
   width: 100%;
   margin: 0;
+  padding-top: 50px;
+  padding-bottom: 50px;
 
   font-size: 18px;
   text-align: center;
@@ -26,7 +28,7 @@ export const Content = styled.div`
   .main-content {
     font-size: calc(10px + 5vmin);
 
-    width: 60%;
+    width: 70%;
     padding-left: 10%;
 
     vertical-align: middle;
@@ -48,7 +50,7 @@ export const Content = styled.div`
 
   .picture-content {
     margin: auto;
-    width: 40%;
+    width: 30%;
     padding-left: 30px;
 
     vertical-align: middle;
