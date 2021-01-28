@@ -1,6 +1,4 @@
 import React, { useState, useEffect } from "react";
-import ReactGA from "react-ga";
-
 import { Content, Background } from "./styles";
 
 import { Link } from "react-router-dom";
