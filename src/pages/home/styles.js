@@ -4,17 +4,20 @@ export const Content = styled.div`
   width: 100%;
   margin: 0;
 
+  font-size: 18px;
+  text-align: center;
+
   position: absolute;
   top: 50%;
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
 
-  display: table;
-  text-align: center;
+  .content-table {
+    display: table;
+    text-align: center;
+  }
 
   .content-row {
-    text-align: center;
-
     display: table-row;
   }
 
@@ -41,14 +44,26 @@ export const Content = styled.div`
   }
 
   .picture-content {
-    width: 50%;
+    width: 40%;
     padding-right: 30px;
 
-    vertical-align: middle;
     display: table-cell;
 
     img {
       max-width: 500px;
     }
+  }
+
+  .footer-content {
+    margin: auto;
+    padding: 10px;
+    max-width: 700px;
+  }
+
+  .highlight {
+    font-weight: bold;
+    color: #ffffff;
+    background: #14274e;
+    padding: 0px 1px 2px 1px;
   }
 `;
