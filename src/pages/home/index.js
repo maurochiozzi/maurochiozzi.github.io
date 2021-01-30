@@ -16,8 +16,12 @@ export default function Home() {
             <p className="left">
               - <i>Hey!</i> It's me, <b>Mauro!</b>
             </p>
-            <i className="right">Mauro </i>
-            <i className="right under">who?</i> -
+            <p className="right">
+              <i>
+                Mauro <span className="under">who?</span>
+              </i>{" "}
+              -
+            </p>
             <p className="left">
               - Mauro <b>Chiozzi!</b>
             </p>
@@ -49,8 +53,7 @@ export default function Home() {
         </p>
         <small>
           <i>
-            Compliments, suggestions, or coffee: see footer below for e-mail
-            contact.
+            Compliments, suggestions, or coffee: see footer for e-mail contact.
           </i>
         </small>
       </div>

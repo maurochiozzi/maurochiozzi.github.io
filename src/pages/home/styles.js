@@ -15,13 +15,12 @@ export const Content = styled.div`
   transform: translateY(-50%);
 
   .content-table {
+    width: 100%;
     display: table;
     text-align: center;
   }
 
   .content-row {
-    width: 100%;
-
     display: table-row;
   }
 
@@ -29,9 +28,8 @@ export const Content = styled.div`
     font-size: calc(10px + 5vmin);
 
     width: 70%;
-    padding-left: 10%;
-
-    vertical-align: middle;
+    padding-left: 4%;
+    padding-right: 4%;
 
     .left {
       text-align: left;
@@ -49,9 +47,8 @@ export const Content = styled.div`
   }
 
   .picture-content {
-    margin: auto;
     width: 30%;
-    padding-left: 30px;
+    padding: 5px;
 
     vertical-align: middle;
 
