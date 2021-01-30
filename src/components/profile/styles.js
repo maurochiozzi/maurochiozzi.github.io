@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 const PictureFrame = styled.img`
-  width: 150px;
+  width: 200px;
 
   border-radius: 50%;
   background: white;
