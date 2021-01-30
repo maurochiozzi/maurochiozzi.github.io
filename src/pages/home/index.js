@@ -30,10 +30,29 @@ export default function Home() {
           You may use upper bar for About and also to discover some Awesome
           Projects. <br />
           Don't forget to follow me on{" "}
-          <span className="highlight">[GitHub]</span> and{" "}
-          <span className="highlight">[LinkedIn]</span> :D
+          <a
+            href={"https://github.com/maurochiozzi"}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            [GitHub]
+          </a>{" "}
+          and{" "}
+          <a
+            href={"https://www.linkedin.com/in/maurochiozzi/"}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            [LinkedIn]
+          </a>{" "}
+          :D
         </p>
-        <small>See footer bar for Social Networks</small>
+        <small>
+          <i>
+            Compliments, suggestions, or coffee: see footer below for e-mail
+            contact.
+          </i>
+        </small>
       </div>
     </Content>
   );
