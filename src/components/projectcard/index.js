@@ -40,6 +40,9 @@ export function ProjectCard(props) {
             <img src={project.thumbnail} alt="Project Thumbnail" />
           </div>
           <div className="caption">{project.caption}</div>
+          <div className="keywords">
+            <b>Technologies:</b> <i>{project.tools.join(", ")}</i>
+          </div>
           <div className="button">Learn More</div>
         </div>
       </CardBox>
@@ -85,11 +88,16 @@ export function ProjectCard(props) {
                 Source
               </a>
             ) : (
-              <p>No source is available for this project.</p>
+              <p>
+                <i>No source is available for this project.</i>
+              </p>
             )}
 
             <div>
-              <p>Main tools/technologies: {project.tools.join(", ")}.</p>
+              <p>
+                <b>Main tools/technologies:</b>{" "}
+                <i>{project.tools.join(", ")}</i>
+              </p>
             </div>
             <div className="button" onClick={handleClose}>
               Back

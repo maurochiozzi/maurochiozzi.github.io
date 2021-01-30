@@ -5,7 +5,7 @@ export const CardBox = styled.div`
 
   width: 300px;
   min-width: 300px;
-  height: 400px;
+  height: 500px;
 
   text-align: left;
 
@@ -39,16 +39,28 @@ export const CardBox = styled.div`
     margin-bottom: 0px;
   }
 
+  .keywords {
+    padding: 5px;
+    margin: 0px;
+    height: 80px;
+  }
+
   .button {
+    /* position: fixed; */
+
+    text-align: center;
+
     height: 23px;
+    width: 90px;
     float: right;
 
+    padding: 1px 5px 2px 5px;
+
     margin-right: 15px;
-    margin-bottom: 0px;
+    bottom: 0px;
 
     border-radius: 4px;
 
-    padding: 1px 5px 2px 5px;
     background-color: #14274e;
     color: #ffffff;
 
