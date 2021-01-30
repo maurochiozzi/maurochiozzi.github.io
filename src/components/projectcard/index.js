@@ -91,7 +91,7 @@ export function ProjectCard(props) {
             <div>
               <p>Main tools/technologies: {project.tools.join(", ")}.</p>
             </div>
-            <div className="button" onClick={handleDetails}>
+            <div className="button" onClick={handleClose}>
               Back
             </div>
           </Modal>
