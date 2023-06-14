@@ -27,6 +27,11 @@ export const steeringwheel = {
       legend: "Inside assembly detail",
     },
     {
+      id: 4,
+      src: require("./sw-5.PNG"),
+      legend: "Field of View improvement: orange (old) to green (new)",
+    },
+    {
       id: 3,
       src: require("./sw-3.png"),
       legend: "Steering wheel finished",

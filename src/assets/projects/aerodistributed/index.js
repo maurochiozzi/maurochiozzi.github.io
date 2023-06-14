@@ -1,6 +1,6 @@
 export const aero_distributed = {
   id: 11,
-  title: "AeroDesign E-System",
+  title: "Aircraft E-System",
   caption:
     "A distributed embedded system to acquire data from AeroDesign airplane and display on real-time data to box Team.",
   thumbnail: require("./tmb.jpg"),

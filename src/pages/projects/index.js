@@ -20,8 +20,8 @@ export default function Projects() {
       <div className="title">Awesome Projects!</div>
       <div className="caption">
         <p>
-          Here you can find some awesome projects developed by Mauro Chiozzi and
-          Team. Click on then to find out more details!
+          Here you can find some awesome projects developed by Mauro Chiozzi &
+          Team. Click on them to find out more details!
         </p>
       </div>
       <div className="wrapper">
