@@ -13,7 +13,11 @@ export const solidworks = {
       legend: "Tool cart designed for harsh environments",
       src: require("./solidworks_6.png"),
     },
-
+    {
+      id: 8,
+      legend: "Paletteknife for controlled thickness application",
+      src: require("./solidworks_1.png"),
+    },
     {
       id: 1,
       legend: "3-axis load measurement bench",
