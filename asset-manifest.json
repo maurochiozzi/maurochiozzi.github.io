@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.562b03e0.css",
-    "main.js": "/static/js/main.990e3f60.js",
+    "main.js": "/static/js/main.0ceac011.js",
     "static/media/ck-1.png": "/static/media/ck-1.05fb4bc15f0f9e20c2f2.png",
     "static/media/cka-4.JPG": "/static/media/cka-4.e1b7b3a3668ff4cdc23f.JPG",
     "static/media/ck-3.jpg": "/static/media/ck-3.47c4854de734a9b525f1.jpg",
@@ -50,6 +50,7 @@
     "static/media/loadcell-1.JPG": "/static/media/loadcell-1.b892ffdcfb6005c67c39.JPG",
     "static/media/loadcell-7.JPG": "/static/media/loadcell-7.5f293cda3713edf9c7c2.JPG",
     "static/media/7v-2.PNG": "/static/media/7v-2.707df6595a22edaeb8bc.PNG",
+    "static/media/solidworks_1.png": "/static/media/solidworks_1.baeb141a08aeafc3534a.png",
     "static/media/loadcell-5.png": "/static/media/loadcell-5.7c27b6e95ab096b1b8af.png",
     "static/media/ckt-4.JPG": "/static/media/ckt-4.4b72a98f6e92079a2d91.JPG",
     "static/media/shelf.png": "/static/media/shelf.7de9c3e828c8e42a1b85.png",
@@ -60,10 +61,10 @@
     "static/media/tmb.JPG": "/static/media/tmb.549fdd03cde1ae12cb1f.JPG",
     "index.html": "/index.html",
     "main.562b03e0.css.map": "/static/css/main.562b03e0.css.map",
-    "main.990e3f60.js.map": "/static/js/main.990e3f60.js.map"
+    "main.0ceac011.js.map": "/static/js/main.0ceac011.js.map"
   },
   "entrypoints": [
     "static/css/main.562b03e0.css",
-    "static/js/main.990e3f60.js"
+    "static/js/main.0ceac011.js"
   ]
 }
