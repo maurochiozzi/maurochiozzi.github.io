@@ -3,7 +3,7 @@ export const loadcell = {
   title: "Multi-axis Loadcell",
   caption:
     "Development of a multi-axis loadcell for general applications during airplane development for AeroDesign SAE competitions.",
-  thumbnail: require("./tmb.JPG"),
+  thumbnail: require("./tmb.jpg"),
   text: [
     "This project had as a goal the development of multi-axis loadcell for the Car-Kará AeroDesign SAE Team (UFRN) could use it in different applications. However, this development covers only the first part of the project development: elastic element geometry selection and embedded data acquisition development.",
     "To do so, all kinds of applications where mapped with their respective boundary conditions. After prioritizing loadcell applications, the development started by selecting the geometry for the elastic element that would allow the acquisition of the loads applied in X, Y and Z-axis (forces and momentums), and furthermore simulations using Ansys for mechanical analysis under boundary conditions.",

@@ -1,6 +1,6 @@
 export const solidworks = {
   id: 14,
-  title: "SolidWorks Sketches",
+  title: "SolidWorks Designs",
   caption: "A compilation of some SolidWorks sketches / parts / assemblies",
   thumbnail: require("./tmb.png"),
   text: [],

@@ -12,12 +12,14 @@ import { aero_distributed } from "./aerodistributed";
 import { sevenvelo } from "./sevenvelo";
 import { sketchup } from "./sketchup";
 import { solidworks } from "./solidworks";
+import { catia } from "./catia";
 
 export const ProjectsData = [
   steeringwheel,
   loadcell,
   distributed,
   solidworks,
+  catia,
   sketchup,
   aero_distributed,
   centralized,
