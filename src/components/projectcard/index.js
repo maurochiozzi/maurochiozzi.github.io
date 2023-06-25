@@ -14,15 +14,13 @@ export function ProjectCard(props) {
   const project = props.project;
 
   const handleDetails = () => {
-    setShowDetails(true);
+    process.env.NODE_ENV !== "development" &&
+      window.gtag("config", "G-9RF05WQMZY", {
+        page_title: project.title,
+        page_path: "/projects/" + project.title,
+      });
 
-    if (showDetails) {
-      process.env.NODE_ENV !== "development" &&
-        window.gtag("config", "G-VXQFQJF6VJ", {
-          page_title: project.title,
-          page_path: "/projects/" + project.title,
-        });
-    }
+    setShowDetails(true);
   };
 
   const handleClose = () => {
