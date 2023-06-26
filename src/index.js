@@ -4,6 +4,10 @@ import "./index.css";
 import App from "./App";
 import * as serviceWorker from "./serviceWorker";
 
+import { install } from "ga-gtag";
+
+install("G-9RF05WQMZY");
+
 ReactDOM.render(
   <React.StrictMode>
     <App />

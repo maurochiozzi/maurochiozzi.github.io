@@ -1,4 +1,7 @@
 import React, { useState, useEffect } from "react";
+
+import { gtag } from "ga-gtag";
+
 import { Content, Background } from "./styles";
 
 import { Link } from "react-router-dom";
@@ -21,7 +24,7 @@ export default function NotFound() {
 
   useEffect(() => {
     process.env.NODE_ENV !== "development" &&
-      window.gtag("config", "G-9RF05WQMZY", {
+      gtag("event", "page_view", {
         page_title: "404-error",
         page_path: "/404-error",
       });

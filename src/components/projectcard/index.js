@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 
+import { gtag } from "ga-gtag";
+
 import { CardBox, Modal } from "./styles";
 import { ClickAwayListener } from "@material-ui/core";
 
@@ -15,7 +17,7 @@ export function ProjectCard(props) {
 
   const handleDetails = () => {
     process.env.NODE_ENV !== "development" &&
-      window.gtag("config", "G-9RF05WQMZY", {
+      gtag("event", "page_view", {
         page_title: project.title,
         page_path: "/projects/" + project.title,
       });
