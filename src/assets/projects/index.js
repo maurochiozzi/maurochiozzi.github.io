@@ -10,18 +10,24 @@ import { centralized } from "./centralized";
 import { distributed } from "./distributed";
 import { aero_distributed } from "./aerodistributed";
 import { sevenvelo } from "./sevenvelo";
+import { sketchup } from "./sketchup";
+import { solidworks } from "./solidworks";
+import { catia } from "./catia";
 
 export const ProjectsData = [
+  steeringwheel,
   loadcell,
+  distributed,
+  solidworks,
+  catia,
+  sketchup,
+  aero_distributed,
+  centralized,
   embraer,
   sinfo,
-  steeringwheel,
-  distributed,
   telemetry,
-  portfolio,
   seriuslogger,
   liverplot,
-  centralized,
-  aero_distributed,
   sevenvelo,
+  portfolio,
 ];
