@@ -31,7 +31,7 @@ export default function Home() {
       <div className="footer-content">
         <p>Grab your tools and start exploring!</p>
         <p>
-          You may use upper bar for About and also to discover some Awesome
+          You may use the upper bar for About and also to discover some Awesome
           Projects. <br />
           Don't forget to follow me on{" "}
           <a
