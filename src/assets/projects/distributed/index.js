@@ -1,8 +1,8 @@
 export const distributed = {
   id: 5,
-  title: "Distributed E-System",
+  title: "Off-road Vehicle ES",
   caption:
-    "A distributed embedded system to acquire data from our Baja prototype and display on real-time data to pilot and box Team.",
+    "A distributed embedded system (ES) to acquire data from our Baja prototype and display real-time data to pilot and box Team.",
   thumbnail: require("./tmb.png"),
   text: [""],
   source: "",
@@ -20,12 +20,20 @@ export const distributed = {
       id: 1,
       src: require("./ck-1.png"),
       legend:
-        "Electronic Control Units over the car, and harness connecting then",
+        "Electronic Control Units over the car, and harness connecting them",
+    },
+    {
+      id: 4,
+      src: require("./case_1.png"),
     },
     {
       id: 2,
       src: require("./ck-2.jpeg"),
       legend: "Some PCBs from the distributed system",
+    },
+    {
+      id: 3,
+      src: require("./ck_kansas.png"),
     },
   ],
 };
