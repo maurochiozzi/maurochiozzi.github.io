@@ -1,4 +1,7 @@
 import React, { useState, useEffect } from "react";
+
+import { gtag } from "ga-gtag";
+
 import { Content, Background } from "./styles";
 
 import { Link } from "react-router-dom";
@@ -21,7 +24,7 @@ export default function NotFound() {
 
   useEffect(() => {
     process.env.NODE_ENV !== "development" &&
-      window.gtag("config", "G-VXQFQJF6VJ", {
+      gtag("event", "page_view", {
         page_title: "404-error",
         page_path: "/404-error",
       });
@@ -34,8 +37,8 @@ export default function NotFound() {
         <h1>Ooops! Page not found, Error 404 </h1>
         <p>
           Well... Looks like you tried to search for the wrong Mauro. No
-          worries, maybe the content you were looking for was misspelt or it
-          just unavailable, or may be moved away.
+          worries, maybe the content you were looking for was misspelled, or it
+          just unavailable, or maybe moved away.
         </p>
         <p>Perhaps you should contact me to report this issue.</p>
         <Link to="/">Go back to safety</Link>
