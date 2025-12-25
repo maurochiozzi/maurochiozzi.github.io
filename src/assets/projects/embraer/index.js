@@ -10,7 +10,7 @@ export const embraer = {
   ],
   source: "https://embraer.com/global/en",
   key_developers: ["Mauro Chiozzi"],
-  tools: ["Python/DRF","React.js", "SAP Script", "Quality Tools"],
+  tools: ["Python/DRF", "React.js", "SAP Script", "Quality Tools"],
   pictures: [
     {
       id: 1,
