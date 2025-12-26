@@ -22,9 +22,12 @@ export const Content = styled.div`
 
   .title {
     text-align: center;
-    font-size: 26px;
-    font-weight: bold;
     margin-bottom: 10px;
+
+    h1 {
+      font-size: 26px;
+      font-weight: bold;
+    }
   }
 
   .under {

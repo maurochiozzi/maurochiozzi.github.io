@@ -26,7 +26,7 @@ export default function About() {
       <Profile />
       <div className="picture"></div>
       <div className="title">
-        <p>Hello, there! I'm Mauro Chiozzi!</p>
+        <h1>Hello, there! I'm Mauro Chiozzi!</h1>
       </div>
       <div className="main-content">
         <p>
@@ -41,6 +41,7 @@ export default function About() {
             href="https://www.ufrn.br/en"
             target="_blank"
             rel="noopener noreferrer"
+            aria-label="UFRN (opens in a new tab)"
           >
             <span className="highlight">[UFRN]</span>
           </a>{" "}
@@ -73,7 +74,7 @@ export default function About() {
         <p>
           A lot of things happened during those academic years, and some of them
           you can find out by downloading my{" "}
-          <a href={Resume} target="_blank" rel="noopener noreferrer">
+          <a href={Resume} target="_blank" rel="noopener noreferrer" aria-label="Download Resume (opens in a new tab)">
             <span className="highlight">[resume here]</span>
           </a>
           ; visiting the{" "}

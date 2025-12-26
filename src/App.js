@@ -24,7 +24,7 @@ export default function App() {
     >
       <Bar />
 
-      <div className="app-main-content">
+      <main className="app-main-content">
         <Suspense
           fallback={
             <Box
@@ -45,7 +45,7 @@ export default function App() {
             <Route path="*" element={<NotFound />} />
           </Routes>
         </Suspense>
-      </div>
+      </main>
 
       <Footer />
     </HashRouter>
