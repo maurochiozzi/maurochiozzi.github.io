@@ -1,5 +1,5 @@
 import { Suspense, lazy } from "react";
-import { HashRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Box from "@mui/material/Box";
 import CircularProgress from "@mui/material/CircularProgress";
 import CssBaseline from "@mui/material/CssBaseline";
@@ -19,7 +19,7 @@ export default function App() {
     <ThemeProvider>
       <CssBaseline />
       <GlobalStyles />
-      <HashRouter
+      <BrowserRouter
         basename="/"
         future={{
           v7_startTransition: true,
@@ -52,7 +52,7 @@ export default function App() {
         </main>
 
         <Footer />
-      </HashRouter>
+      </BrowserRouter>
     </ThemeProvider>
   );
 }
