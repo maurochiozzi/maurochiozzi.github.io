@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import { gtag } from "ga-gtag";
 import {
   Modal,
@@ -10,7 +10,13 @@ import {
   Typography,
   Button,
 } from "@mui/material";
-import { FaTimes, FaGithub, FaExternalLinkAlt, FaCode } from "react-icons/fa";
+import {
+  FaTimes,
+  FaGithub,
+  FaExternalLinkAlt,
+  FaCode,
+  FaChevronDown,
+} from "react-icons/fa";
 
 import { Content, Grid, ModalContent } from "./styles";
 
@@ -22,6 +28,24 @@ import { ProjectsData } from "../../assets/projects/";
 
 export default function Projects() {
   const [selectedProject, setSelectedProject] = useState(null);
+  const contentRef = useRef(null);
+  const [showScroll, setShowScroll] = useState(false);
+
+  const checkScroll = () => {
+    if (contentRef.current) {
+      const { scrollTop, scrollHeight, clientHeight } = contentRef.current;
+      setShowScroll(
+        scrollHeight > clientHeight &&
+          scrollTop + clientHeight < scrollHeight - 10,
+      );
+    }
+  };
+
+  const handleScrollDown = () => {
+    if (contentRef.current) {
+      contentRef.current.scrollBy({ top: 150, behavior: "smooth" });
+    }
+  };
 
   const handleOpen = (project) => setSelectedProject(project);
   const handleClose = () => setSelectedProject(null);
@@ -33,7 +57,18 @@ export default function Projects() {
     transform: "translate(-50%, -50%)",
     width: "90%",
     maxWidth: "900px",
-    bgcolor: "background.paper",
+    background: (theme) =>
+      theme.palette.mode === "dark"
+        ? "rgba(30, 41, 59, 0.5)"
+        : "rgba(255, 255, 255, 0.5)",
+    backdropFilter: "blur(24px) saturate(180%)",
+    WebkitBackdropFilter: "blur(24px) saturate(180%)",
+    border: (theme) =>
+      `1px solid ${
+        theme.palette.mode === "dark"
+          ? "rgba(255, 255, 255, 0.1)"
+          : "rgba(255, 255, 255, 0.4)"
+      }`,
     borderRadius: "24px",
     boxShadow: 24,
     outline: "none",
@@ -50,6 +85,13 @@ export default function Projects() {
         page_path: "/projects",
       });
   }, []);
+
+  useEffect(() => {
+    if (selectedProject) {
+      const timer = setTimeout(checkScroll, 100);
+      return () => clearTimeout(timer);
+    }
+  }, [selectedProject]);
 
   return (
     <Content>
@@ -144,74 +186,113 @@ export default function Projects() {
                     <FaTimes />
                   </IconButton>
                 </div>
-                <Box
-                  sx={{
-                    p: 4,
-                    overflowY: "auto",
-                    maxHeight: {
-                      xs: "calc(90vh - 300px)",
-                      md: "calc(90vh - 450px)",
-                    },
-                  }}
-                >
-                  <Typography
-                    variant="h4"
-                    component="h2"
-                    fontWeight="800"
-                    gutterBottom
-                  >
-                    {selectedProject.title}
-                  </Typography>
-
+                <Box sx={{ position: "relative" }}>
                   <Box
-                    sx={{ display: "flex", gap: 1, flexWrap: "wrap", mb: 3 }}
+                    ref={contentRef}
+                    onScroll={checkScroll}
+                    sx={{
+                      py: 4,
+                      px: 0,
+                      overflowY: "auto",
+                      maxHeight: {
+                        xs: "calc(90vh - 300px)",
+                        md: "calc(90vh - 450px)",
+                      },
+                      scrollbarWidth: "none",
+                      "&::-webkit-scrollbar": {
+                        display: "none",
+                      },
+                    }}
                   >
-                    {selectedProject.tools.map((tool) => (
-                      <Chip key={tool} label={tool} icon={<FaCode />} />
-                    ))}
-                  </Box>
+                    <Typography
+                      variant="h4"
+                      component="h2"
+                      fontWeight="800"
+                      gutterBottom
+                    >
+                      {selectedProject.title}
+                    </Typography>
 
-                  <Box sx={{ mb: 4 }}>
-                    {Array.isArray(selectedProject.text) &&
-                    selectedProject.text.length > 0 ? (
-                      selectedProject.text.map((paragraph, index) => (
+                    <Box
+                      sx={{ display: "flex", gap: 1, flexWrap: "wrap", mb: 3 }}
+                    >
+                      {selectedProject.tools.map((tool) => (
+                        <Chip key={tool} label={tool} icon={<FaCode />} />
+                      ))}
+                    </Box>
+
+                    <Box sx={{ mb: 4 }}>
+                      {Array.isArray(selectedProject.text) &&
+                      selectedProject.text.length > 0 ? (
+                        selectedProject.text.map((paragraph, index) => (
+                          <Typography
+                            key={index}
+                            paragraph
+                            color="text.secondary"
+                            sx={{ lineHeight: 1.8 }}
+                          >
+                            {paragraph}
+                          </Typography>
+                        ))
+                      ) : (
                         <Typography
-                          key={index}
                           paragraph
                           color="text.secondary"
                           sx={{ lineHeight: 1.8 }}
                         >
-                          {paragraph}
+                          {selectedProject.caption}
                         </Typography>
-                      ))
-                    ) : (
-                      <Typography
-                        paragraph
-                        color="text.secondary"
-                        sx={{ lineHeight: 1.8 }}
+                      )}
+                    </Box>
+
+                    {selectedProject.source && (
+                      <Button
+                        variant="contained"
+                        startIcon={<FaGithub />}
+                        href={selectedProject.source}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        sx={{
+                          borderRadius: "50px",
+                          textTransform: "none",
+                          fontWeight: "bold",
+                          px: 4,
+                        }}
                       >
-                        {selectedProject.caption}
-                      </Typography>
+                        View Source
+                      </Button>
                     )}
                   </Box>
-
-                  {selectedProject.source && (
-                    <Button
-                      variant="contained"
-                      startIcon={<FaGithub />}
-                      href={selectedProject.source}
-                      target="_blank"
-                      rel="noopener noreferrer"
+                  <Fade in={showScroll}>
+                    <IconButton
+                      onClick={handleScrollDown}
                       sx={{
-                        borderRadius: "50px",
-                        textTransform: "none",
-                        fontWeight: "bold",
-                        px: 4,
+                        position: "absolute",
+                        bottom: 20,
+                        left: "50%",
+                        transform: "translateX(-50%)",
+                        bgcolor: (theme) => theme.palette.background.paper,
+                        boxShadow: 4,
+                        zIndex: 10,
+                        "@keyframes bounce": {
+                          "0%, 100%": {
+                            transform: "translateX(-50%) translateY(0)",
+                          },
+                          "50%": {
+                            transform: "translateX(-50%) translateY(5px)",
+                          },
+                        },
+                        animation: "bounce 2s infinite",
+                        "&:hover": {
+                          bgcolor: (theme) => theme.palette.background.paper,
+                          opacity: 0.9,
+                        },
                       }}
+                      size="small"
                     >
-                      View Source
-                    </Button>
-                  )}
+                      <FaChevronDown />
+                    </IconButton>
+                  </Fade>
                 </Box>
               </ModalContent>
             )}
