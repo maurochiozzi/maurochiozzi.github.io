@@ -135,6 +135,7 @@ export default function Projects() {
                       position: "absolute",
                       top: 16,
                       right: 16,
+                      zIndex: 10,
                       bgcolor: "rgba(0,0,0,0.5)",
                       color: "white",
                       "&:hover": { bgcolor: "rgba(0,0,0,0.7)" },
@@ -171,16 +172,27 @@ export default function Projects() {
                   </Box>
 
                   <Box sx={{ mb: 4 }}>
-                    {selectedProject.text.map((paragraph, index) => (
+                    {Array.isArray(selectedProject.text) &&
+                    selectedProject.text.length > 0 ? (
+                      selectedProject.text.map((paragraph, index) => (
+                        <Typography
+                          key={index}
+                          paragraph
+                          color="text.secondary"
+                          sx={{ lineHeight: 1.8 }}
+                        >
+                          {paragraph}
+                        </Typography>
+                      ))
+                    ) : (
                       <Typography
-                        key={index}
                         paragraph
                         color="text.secondary"
                         sx={{ lineHeight: 1.8 }}
                       >
-                        {paragraph}
+                        {selectedProject.caption}
                       </Typography>
-                    ))}
+                    )}
                   </Box>
 
                   {selectedProject.source && (
