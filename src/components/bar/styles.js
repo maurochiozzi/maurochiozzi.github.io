@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const Nav = styled.div`
-  height: 56px;
+  height: 32px;
 
   position: fixed;
   z-index: 1100;
@@ -14,9 +14,9 @@ export const Nav = styled.div`
   padding: 0 16px;
   box-sizing: border-box;
 
-  background-color: ${(props) => props.theme.palette.primary.main}80;
-  backdrop-filter: saturate(180%) blur(12px);
-  -webkit-backdrop-filter: saturate(180%) blur(12px);
+  background-color: ${(props) => props.theme.palette.primary.main}4D;
+  backdrop-filter: saturate(180%) blur(16px);
+  -webkit-backdrop-filter: saturate(180%) blur(16px);
   border-bottom: 1px solid rgba(255, 255, 255, 0.3);
   color: ${(props) => props.theme.palette.primary.contrastText};
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
@@ -41,7 +41,7 @@ export const Nav = styled.div`
 
   /* Desktop: Floating, rounded, centered */
   ${(props) => props.theme.breakpoints.up("sm")} {
-    height: 64px;
+    height: 40px;
     top: 16px;
     width: 95%;
     max-width: 1200px;
