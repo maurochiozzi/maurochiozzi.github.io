@@ -1,110 +1,36 @@
-import React, { useState } from "react";
+import React from "react";
+import { Chip } from "@mui/material";
+import { CardContainer, CardImage, CardContent } from "./styles";
 
-import { gtag } from "ga-gtag";
-
-import { CardBox, Modal } from "./styles";
-import { ClickAwayListener } from "@material-ui/core";
-
-import "react-responsive-carousel/lib/styles/carousel.min.css";
-import { Carousel } from "react-responsive-carousel";
-
-import { FaTimesCircle } from "react-icons/fa";
-
-export function ProjectCard(props) {
-  const [showDetails, setShowDetails] = useState(false);
-
-  const project = props.project;
-
-  const handleDetails = () => {
-    process.env.NODE_ENV !== "development" &&
-      gtag("event", "page_view", {
-        page_title: project.title,
-        page_path: "/projects/" + project.title,
-      });
-
-    setShowDetails(true);
-  };
-
-  const handleClose = () => {
-    setTimeout(() => {
-      setShowDetails(false);
-    }, 20);
-  };
-
+export default function ProjectCard({ project, onClick }) {
   return (
-    <React.Fragment>
-      <CardBox>
-        <div className="card-box" onClick={handleDetails}>
-          <div className="title">{project.title}</div>
-          <div className="picture">
-            <img src={project.thumbnail} alt="Project Thumbnail" />
-          </div>
-          <div className="caption">{project.caption}</div>
-          <div className="keywords">
-            <b>Technologies:</b> <i>{project.tools.join(", ")}</i>
-          </div>
-          <div className="button">Learn More</div>
+    <CardContainer onClick={onClick}>
+      <CardImage className="card-image">
+        <img src={project.thumbnail} alt={project.title} />
+      </CardImage>
+      <CardContent>
+        <h3>{project.title}</h3>
+        <p>{project.caption}</p>
+        <div className="tags">
+          {project.tools.slice(0, 3).map((tool) => (
+            <Chip
+              key={tool}
+              label={tool}
+              size="small"
+              variant="outlined"
+              style={{ fontSize: "11px" }}
+            />
+          ))}
+          {project.tools.length > 3 && (
+            <Chip
+              label={`+${project.tools.length - 3}`}
+              size="small"
+              variant="outlined"
+              style={{ fontSize: "11px" }}
+            />
+          )}
         </div>
-      </CardBox>
-
-      {showDetails && (
-        <ClickAwayListener onClickAway={handleClose}>
-          <Modal>
-            <span className="close-button" onClick={handleClose}>
-              <FaTimesCircle />
-            </span>
-            <div className="title">{project.title}</div>
-
-            {project.pictures && (
-              <Carousel
-                dynamicHeight
-                infiniteLoop
-                showStatus={false}
-                showThumbs={false}
-              >
-                {project.pictures.map((picture) => (
-                  <div key={picture.id}>
-                    <img src={picture.src} alt="testing" />
-                    {picture.legend && (
-                      <p className="legend">{picture.legend}</p>
-                    )}
-                  </div>
-                ))}
-              </Carousel>
-            )}
-
-            <div className="text-body">
-              {project.text.map((paragraph) => (
-                <p key={paragraph}>{paragraph}</p>
-              ))}
-            </div>
-
-            {project.source ? (
-              <a
-                href={project.source}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Source
-              </a>
-            ) : (
-              <p>
-                <i>No source is available for this project.</i>
-              </p>
-            )}
-
-            <div>
-              <p>
-                <b>Main tools/technologies:</b>{" "}
-                <i>{project.tools.join(", ")}</i>
-              </p>
-            </div>
-            <div className="button" onClick={handleClose}>
-              Back
-            </div>
-          </Modal>
-        </ClickAwayListener>
-      )}
-    </React.Fragment>
+      </CardContent>
+    </CardContainer>
   );
 }

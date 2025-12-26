@@ -1,166 +1,80 @@
 import styled from "styled-components";
 
-export const CardBox = styled.div`
-  margin: 10px;
+export const CardContainer = styled.div`
+  background: ${({ theme }) =>
+    theme.palette.mode === "dark"
+      ? "rgba(30, 41, 59, 0.6)"
+      : "rgba(255, 255, 255, 0.6)"};
+  backdrop-filter: blur(16px) saturate(180%);
+  -webkit-backdrop-filter: blur(16px) saturate(180%);
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.1);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
+  border: 1px solid
+    ${({ theme }) =>
+      theme.palette.mode === "dark"
+        ? "rgba(255, 255, 255, 0.1)"
+        : "rgba(255, 255, 255, 0.4)"};
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 
-  width: 300px;
-  min-width: 300px;
-  height: 500px;
+  &:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.15);
+    border-color: ${({ theme }) => theme.palette.primary.main}80;
 
-  text-align: left;
-
-  border-radius: 2px;
-  border-style: solid;
-  border-color: #b3b3b3b3;
-  border-width: thin;
-
-  box-shadow: 1px 1px 1px 1px #b3b3b3;
-
-  .title {
-    height: 40px;
-    padding: 5px;
-    margin: 0px;
-  }
-
-  .picture {
-    height: 200px;
-
-    img {
-      width: 100%;
+    .card-image img {
+      transform: scale(1.05);
     }
-  }
-
-  .caption {
-    height: 100px;
-    padding: 5px;
-    text-align: left;
-    font-size: 16px;
-
-    margin-bottom: 0px;
-  }
-
-  .keywords {
-    padding: 5px;
-    margin: 0px;
-    height: 80px;
-  }
-
-  .button {
-    /* position: fixed; */
-
-    text-align: center;
-
-    height: 23px;
-    width: 90px;
-    float: right;
-
-    padding: 1px 5px 2px 5px;
-
-    margin-right: 15px;
-    bottom: 0px;
-
-    border-radius: 4px;
-
-    background-color: #14274e;
-    color: #ffffff;
-
-    cursor: pointer;
   }
 `;
 
-export const Modal = styled.div`
-  position: fixed;
-  z-index: 1;
+export const CardImage = styled.div`
+  width: 100%;
+  height: 220px;
+  overflow: hidden;
+  position: relative;
 
-  top: 100px;
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+  }
+`;
 
-  width: 80%;
-  min-width: 300px;
-  max-width: 800px;
+export const CardContent = styled.div`
+  padding: 24px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
 
-  max-height: 80%;
-
-  overflow: auto;
-
-  background-color: #ffffff;
-  border-radius: 2;
-
-  border-style: solid;
-  border-color: #b3b3b3b3;
-  border-width: thin;
-
-  box-shadow: 1px 1px 1px 1px #b3b3b3;
-
-  .close-button {
-    float: right;
-    padding: 17px 10px 0 0;
+  h3 {
+    margin: 0 0 12px;
+    font-size: 22px;
+    font-weight: 800;
+    letter-spacing: -0.5px;
+    color: ${({ theme }) => theme.palette.text.primary};
   }
 
-  .title {
-    height: 40px;
-    padding: 5px;
-    text-align: left;
+  p {
+    margin: 0 0 24px;
+    font-size: 16px;
+    color: ${({ theme }) => theme.palette.text.secondary};
+    line-height: 1.5;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
   }
 
-  .text-body {
-    text-align: justify;
-    margin: 10px;
-  }
-
-  .carousel {
-    .slide {
-      img {
-        height: 500px;
-        min-width: 300px;
-        width: auto;
-      }
-      background-color: white;
-    }
-
-    .legend {
-      background-color: #14274e;
-      font: inherit;
-    }
-
-    .control-prev::before {
-      border-right: 8px solid #14274e;
-    }
-
-    .control-next::before {
-      border-left: 8px solid #14274e;
-    }
-
-    .dot {
-      background: #14274e;
-    }
-  }
-
-  .button {
-    height: 23px;
-    float: right;
-
-    margin-right: 15px;
-    margin-bottom: 20px;
-
-    border-radius: 4px;
-
-    padding: 1px 5px 2px 5px;
-    background-color: #14274e;
-    color: #ffffff;
-
-    cursor: pointer;
-  }
-
-  a {
-    height: 23px;
-
-    text-decoration: none;
-    color: inherit;
-
-    border-radius: 4px;
-
-    padding: 1px 5px 2px 5px;
-    background-color: #14274e;
-    color: #ffffff;
+  .tags {
+    margin-top: auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
   }
 `;
