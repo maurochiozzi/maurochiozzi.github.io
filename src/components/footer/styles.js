@@ -31,9 +31,15 @@ export const Footer = styled.div`
     padding: 0 10px;
     text-decoration: none;
     color: inherit;
+    display: flex;
+    align-items: center;
     transition: opacity 0.2s;
     &:hover {
       opacity: 0.8;
+    }
+
+    svg {
+      font-size: 20px;
     }
   }
 
