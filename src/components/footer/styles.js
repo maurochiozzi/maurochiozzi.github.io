@@ -6,8 +6,8 @@ export const Footer = styled.div`
   bottom: 0;
   width: 100%;
 
-  background-color: #14274e;
-  color: #ffffff;
+  background-color: ${(props) => props.theme.palette.primary.main};
+  color: ${(props) => props.theme.palette.primary.contrastText};
 
   height: 50px;
 
