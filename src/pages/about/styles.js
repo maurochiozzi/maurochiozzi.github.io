@@ -15,13 +15,13 @@ export const Content = styled.div`
 
   .highlight {
     font-weight: bold;
-    color: #ffffff;
-    background: #14274e;
+    color: ${({ theme }) => theme.palette.primary.contrastText};
+    background: ${({ theme }) => theme.palette.primary.main};
     padding: 0px 1px 2px 1px;
     transition: background-color 0.2s ease;
 
     &:hover {
-      background-color: #1f3c75;
+      background-color: ${({ theme }) => theme.palette.primary.light};
     }
   }
 

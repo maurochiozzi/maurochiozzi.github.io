@@ -9,8 +9,8 @@ export const Content = styled.div`
   animation: ${fadeIn} 0.8s ease-out;
 
   .main-content {
-    background-color: #14274e;
-    color: white;
+    background-color: ${({ theme }) => theme.palette.primary.main};
+    color: ${({ theme }) => theme.palette.primary.contrastText};
 
     margin-top: calc(50px + 10%);
     margin-left: 10%;
@@ -28,14 +28,16 @@ export const Content = styled.div`
     display: inline-block;
     margin-top: 15px;
     padding: 10px 20px;
-    background-color: white;
-    color: #14274e;
+    background-color: ${({ theme }) => theme.palette.background.paper};
+    color: ${({ theme }) => theme.palette.primary.main};
     border-radius: 4px;
     font-weight: bold;
     text-decoration: none;
-    transition: transform 0.2s ease, background-color 0.2s ease;
+    transition:
+      transform 0.2s ease,
+      background-color 0.2s ease;
     &:hover {
-      background-color: #f0f0f0;
+      background-color: ${({ theme }) => theme.palette.secondary.main};
       transform: translateY(-2px);
     }
   }

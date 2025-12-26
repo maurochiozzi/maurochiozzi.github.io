@@ -68,11 +68,10 @@ export const Content = styled.div`
 
   a {
     font-weight: bold;
-    color: #ffffff;
-    background: #14274e;
+    color: ${({ theme }) => theme.palette.primary.contrastText};
+    background: ${({ theme }) => theme.palette.primary.main};
     padding: 0px 1px 2px 1px;
 
     text-decoration: none;
-    color: white;
   }
 `;
