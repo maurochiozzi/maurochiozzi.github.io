@@ -37,6 +37,28 @@ Instead, it will copy all the configuration files and the transitive dependencie
 
 You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
+### `npm run format`
+
+Formats the entire codebase using Prettier.
+
+### `npm run lint`
+
+Runs the linter (ESLint) to catch code quality issues.
+
+### `npm run analyze`
+
+Builds the project and opens a visualization of the bundle size to help with performance optimization.
+
+### `npm run clean`
+
+Deletes `node_modules` and the `build` folder. Useful for resetting the environment.
+
+> **Note:** This project uses **Husky** and **lint-staged** to automatically format and lint your code before every commit.
+
+## CI/CD
+
+This project uses **GitHub Actions** to automatically build and deploy the application to GitHub Pages whenever changes are pushed to the `main` or `master` branch.
+
 ## Learn More
 
 You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
