@@ -14,9 +14,9 @@ export const Nav = styled.div`
   padding: 0 16px;
   box-sizing: border-box;
 
-  background-color: ${(props) => props.theme.palette.primary.main}b3;
-  backdrop-filter: saturate(180%) blur(20px);
-  -webkit-backdrop-filter: saturate(180%) blur(20px);
+  background-color: ${(props) => props.theme.palette.primary.main}80;
+  backdrop-filter: saturate(180%) blur(12px);
+  -webkit-backdrop-filter: saturate(180%) blur(12px);
   border-bottom: 1px solid rgba(255, 255, 255, 0.3);
   color: ${(props) => props.theme.palette.primary.contrastText};
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
@@ -50,7 +50,8 @@ export const Nav = styled.div`
     border-radius: 16px;
     padding: 0 32px;
     box-shadow:
-      0 8px 32px rgba(0, 0, 0, 0.15), inset 0 1px 0 rgba(255, 255, 255, 0.2),
-    border: 1px solid rgba(255, 255, 255, 0.5);
+      0 8px 32px rgba(0, 0, 0, 0.15),
+      inset 0 1px 0 rgba(255, 255, 255, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.3);
   }
 `;
