@@ -11,15 +11,12 @@ import Resume from "../../assets/files/mChiozzi.pdf";
 
 export default function About() {
   useEffect(() => {
-    console.log("yo");
     process.env.NODE_ENV !== "development" &&
       gtag("event", "page_view", {
         page_title: "about",
         page_path: "/about",
       });
   }, []);
-
-  console.log("yo4");
 
   return (
     <Content>
