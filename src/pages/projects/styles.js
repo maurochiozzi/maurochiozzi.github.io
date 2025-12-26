@@ -36,6 +36,7 @@ export const ModalContent = styled.div`
   .modal-image-container {
     width: 100%;
     height: 300px;
+    margin-bottom: 24px;
     position: relative;
     ${({ theme }) => theme.breakpoints.up("md")} {
       height: 450px;

@@ -195,8 +195,8 @@ export default function Projects() {
                       px: 0,
                       overflowY: "auto",
                       maxHeight: {
-                        xs: "calc(90vh - 300px)",
-                        md: "calc(90vh - 450px)",
+                        xs: "calc(90vh - 372px)",
+                        md: "calc(90vh - 522px)",
                       },
                       scrollbarWidth: "none",
                       "&::-webkit-scrollbar": {
@@ -248,7 +248,13 @@ export default function Projects() {
                     {selectedProject.source && (
                       <Button
                         variant="contained"
-                        startIcon={<FaGithub />}
+                        startIcon={
+                          selectedProject.source.includes("github.com") ? (
+                            <FaGithub />
+                          ) : (
+                            <FaExternalLinkAlt />
+                          )
+                        }
                         href={selectedProject.source}
                         target="_blank"
                         rel="noopener noreferrer"
