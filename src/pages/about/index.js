@@ -71,7 +71,12 @@ export default function About() {
         <p>
           A lot of things happened during those academic years, and some of them
           you can find out by downloading my{" "}
-          <a href={Resume} target="_blank" rel="noopener noreferrer" aria-label="Download Resume (opens in a new tab)">
+          <a
+            href={Resume}
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Download Resume (opens in a new tab)"
+          >
             <span className="highlight">[resume here]</span>
           </a>
           ; visiting the{" "}

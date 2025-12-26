@@ -1,9 +1,15 @@
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
+
+const fadeIn = keyframes`
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+`;
 
 export const Content = styled.div`
   margin: auto;
   padding: 10px;
   max-width: 600px;
+  animation: ${fadeIn} 0.6s ease-out;
 
   font-size: 18px;
 
@@ -12,6 +18,11 @@ export const Content = styled.div`
     color: #ffffff;
     background: #14274e;
     padding: 0px 1px 2px 1px;
+    transition: background-color 0.2s ease;
+
+    &:hover {
+      background-color: #1f3c75;
+    }
   }
 
   .main-content {
@@ -37,5 +48,10 @@ export const Content = styled.div`
   a {
     text-decoration: none;
     color: inherit;
+    transition: opacity 0.2s ease;
+
+    &:hover {
+      opacity: 0.8;
+    }
   }
 `;
