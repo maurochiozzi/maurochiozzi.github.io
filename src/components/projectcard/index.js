@@ -18,6 +18,7 @@ export default function ProjectCard({ project, onClick }) {
       <CardContent>
         <h3>{project.title}</h3>
         <p>{project.caption}</p>
+
         <div className="tags">
           {project.tools.slice(0, 3).map((tool) => (
             <Chip

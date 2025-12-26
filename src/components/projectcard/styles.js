@@ -9,7 +9,9 @@ export const CardContainer = styled.div`
   -webkit-backdrop-filter: blur(16px) saturate(180%);
   border-radius: 24px;
   overflow: hidden;
-  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.1);
+  box-shadow:
+    -10px -10px 30px 0 rgba(0, 0, 0, 0.1),
+    10px 10px 30px 0 rgba(0, 0, 0, 0.1);
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   cursor: pointer;
   border: 1px solid
@@ -23,7 +25,9 @@ export const CardContainer = styled.div`
 
   &:hover {
     transform: translateY(-8px);
-    box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.15);
+    box-shadow:
+      0 20px 40px -10px rgba(0, 0, 0, 0.15),
+      12px 12px 30px 5px ${({ theme }) => theme.palette.primary.main}80;
     border-color: ${({ theme }) => theme.palette.primary.main}80;
 
     .card-image img {
