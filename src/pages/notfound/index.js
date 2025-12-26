@@ -11,9 +11,8 @@ import notfound from "../../assets/images/notfound.jpg";
 export default function NotFound() {
   const [offset, setOffset] = useState(0);
 
-  const normalized_width = (3840 * window.innerHeight) / 1080;
-
   useEffect(() => {
+    const normalized_width = (3840 * window.innerHeight) / 1080;
     const interval = setInterval(() => {
       if (offset > window.innerWidth - normalized_width) {
         setOffset((offset) => offset - 1);
