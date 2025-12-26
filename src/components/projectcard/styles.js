@@ -28,7 +28,6 @@ export const CardContainer = styled.div`
     box-shadow:
       0 20px 40px -10px rgba(0, 0, 0, 0.15),
       12px 12px 30px 5px ${({ theme }) => theme.palette.primary.main}80;
-    border-color: ${({ theme }) => theme.palette.primary.main}80;
 
     .card-image img {
       transform: scale(1.05);
