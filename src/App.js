@@ -15,7 +15,13 @@ const NotFound = lazy(() => import("./pages/notfound"));
 
 export default function App() {
   return (
-    <HashRouter basename="/">
+    <HashRouter
+      basename="/"
+      future={{
+        v7_startTransition: true,
+        v7_relativeSplatPath: true,
+      }}
+    >
       <Bar />
 
       <div className="app-main-content">
