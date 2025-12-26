@@ -1,14 +1,25 @@
 import styled from "styled-components";
 
 export const Nav = styled.div`
-  height: 50px;
+  height: 56px;
 
   position: fixed;
-  top: 0;
-  width: 100%;
+  z-index: 1100;
 
-  background-color: ${(props) => props.theme.palette.primary.main};
+  /* Mobile: Full width, attached to top */
+  top: 0;
+  left: 0;
+  width: 100%;
+  border-radius: 0;
+  padding: 0 16px;
+  box-sizing: border-box;
+
+  background-color: ${(props) => props.theme.palette.primary.main}b3;
+  backdrop-filter: saturate(180%) blur(20px);
+  -webkit-backdrop-filter: saturate(180%) blur(20px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
   color: ${(props) => props.theme.palette.primary.contrastText};
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 
   display: flex;
   align-items: center;
@@ -16,12 +27,30 @@ export const Nav = styled.div`
   justify-content: space-between;
 
   font-weight: bold;
+  transition: all 0.3s ease-in-out;
 
   a {
-    padding: 0 5%;
+    padding: 0 16px;
     text-decoration: none;
     color: inherit;
+    transition: opacity 0.2s;
+    &:hover {
+      opacity: 0.8;
+    }
   }
 
-  z-index: 1;
+  /* Desktop: Floating, rounded, centered */
+  ${(props) => props.theme.breakpoints.up("sm")} {
+    height: 64px;
+    top: 16px;
+    width: 95%;
+    max-width: 1200px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 16px;
+    padding: 0 32px;
+    box-shadow:
+      0 8px 32px rgba(0, 0, 0, 0.15), inset 0 1px 0 rgba(255, 255, 255, 0.2),
+    border: 1px solid rgba(255, 255, 255, 0.5);
+  }
 `;
