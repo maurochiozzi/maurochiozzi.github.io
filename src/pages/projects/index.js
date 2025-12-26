@@ -13,7 +13,11 @@ import {
 import { FaTimes, FaGithub, FaExternalLinkAlt, FaCode } from "react-icons/fa";
 
 import { Content, Grid, ModalContent } from "./styles";
+
 import ProjectCard from "../../components/projectcard";
+
+import "react-responsive-carousel/lib/styles/carousel.min.css";
+import { Carousel } from "react-responsive-carousel";
 import { ProjectsData } from "../../assets/projects/";
 
 export default function Projects() {
@@ -87,10 +91,44 @@ export default function Projects() {
             {selectedProject && (
               <ModalContent>
                 <div className="modal-image-container">
-                  <img
-                    src={selectedProject.thumbnail}
-                    alt={selectedProject.title}
-                  />
+                  {selectedProject.pictures &&
+                  selectedProject.pictures.length > 0 ? (
+                    <Carousel
+                      showThumbs={false}
+                      showStatus={false}
+                      infiniteLoop
+                      useKeyboardArrows
+                      autoPlay
+                      stopOnHover
+                      showArrows={true}
+                      emulateTouch
+                    >
+                      {selectedProject.pictures.map((picture) => (
+                        <div key={picture.id}>
+                          <img
+                            src={
+                              typeof picture.src === "string"
+                                ? picture.src
+                                : picture.src.default
+                            }
+                            alt={picture.legend}
+                          />
+                          {picture.legend && (
+                            <p className="legend">{picture.legend}</p>
+                          )}
+                        </div>
+                      ))}
+                    </Carousel>
+                  ) : (
+                    <img
+                      src={
+                        typeof selectedProject.thumbnail === "string"
+                          ? selectedProject.thumbnail
+                          : selectedProject.thumbnail.default
+                      }
+                      alt={selectedProject.title}
+                    />
+                  )}
                   <IconButton
                     onClick={handleClose}
                     sx={{
@@ -109,7 +147,10 @@ export default function Projects() {
                   sx={{
                     p: 4,
                     overflowY: "auto",
-                    maxHeight: "calc(90vh - 300px)",
+                    maxHeight: {
+                      xs: "calc(90vh - 300px)",
+                      md: "calc(90vh - 450px)",
+                    },
                   }}
                 >
                   <Typography

@@ -32,17 +32,63 @@ export const Grid = styled.div`
 `;
 
 export const ModalContent = styled.div`
+  padding: 24px;
   .modal-image-container {
     width: 100%;
     height: 300px;
     position: relative;
+    ${({ theme }) => theme.breakpoints.up("md")} {
+      height: 450px;
+    }
     background: #000;
+    border-radius: 24px;
+    overflow: hidden;
 
-    img {
+    /* Fallback image */
+    > img {
       width: 100%;
       height: 100%;
       object-fit: cover;
       opacity: 0.9;
+    }
+
+    /* Carousel Styles */
+    .carousel-root {
+      height: 100%;
+    }
+    .carousel {
+      height: 100%;
+      .slider-wrapper {
+        height: 100%;
+        ul.slider {
+          height: 100%;
+        }
+      }
+    }
+    .carousel .slide {
+      background: transparent;
+      height: 100%;
+
+      & > div {
+        height: 100%;
+      }
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        opacity: 0.9;
+        vertical-align: top;
+      }
+
+      .legend {
+        background: rgba(0, 0, 0, 0.6);
+        backdrop-filter: blur(4px);
+        border-radius: 12px;
+        bottom: 20px;
+        font-size: 14px;
+        opacity: 1;
+      }
     }
   }
 

@@ -6,7 +6,14 @@ export default function ProjectCard({ project, onClick }) {
   return (
     <CardContainer onClick={onClick}>
       <CardImage className="card-image">
-        <img src={project.thumbnail} alt={project.title} />
+        <img
+          src={
+            typeof project.thumbnail === "string"
+              ? project.thumbnail
+              : project.thumbnail.default
+          }
+          alt={project.title}
+        />
       </CardImage>
       <CardContent>
         <h3>{project.title}</h3>
