@@ -1,4 +1,4 @@
-import React, { createContext, useState, useMemo } from "react";
+import React, { createContext, useState, useMemo, useEffect } from "react";
 import {
   ThemeProvider as MuiThemeProvider,
   createTheme,
@@ -78,7 +78,14 @@ export const ThemeContext = createContext({
 });
 
 export function ThemeProvider({ children }) {
-  const [themeMode, setThemeMode] = useState("light");
+  const [themeMode, setThemeMode] = useState(() => {
+    if (typeof window !== "undefined" && window.matchMedia) {
+      return window.matchMedia("(prefers-color-scheme: dark)").matches
+        ? "dark"
+        : "light";
+    }
+    return "light";
+  });
 
   const theme = useMemo(
     () => (themeMode === "light" ? lightTheme : darkTheme),
@@ -88,6 +95,24 @@ export function ThemeProvider({ children }) {
   const toggleTheme = () => {
     setThemeMode((prevMode) => (prevMode === "light" ? "dark" : "light"));
   };
+
+  useEffect(() => {
+    const color = theme.palette.primary.main;
+    const metaTags = document.querySelectorAll("meta[name='theme-color']");
+    metaTags.forEach((tag, index) => {
+      if (index > 0) tag.remove();
+    });
+
+    let metaThemeColor = metaTags[0];
+    if (!metaThemeColor) {
+      metaThemeColor = document.createElement("meta");
+      metaThemeColor.name = "theme-color";
+      document.head.appendChild(metaThemeColor);
+    }
+
+    metaThemeColor.setAttribute("content", color);
+    metaThemeColor.removeAttribute("media");
+  }, [theme]);
 
   return (
     <ThemeContext.Provider value={{ toggleTheme }}>

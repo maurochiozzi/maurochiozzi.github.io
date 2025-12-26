@@ -9,10 +9,10 @@ export const Content = styled.div`
   font-size: 18px;
   text-align: center;
 
-  position: absolute;
-  top: 50%;
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex: 1;
 
   .content-table {
     width: 100%;
