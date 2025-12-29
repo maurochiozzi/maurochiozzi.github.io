@@ -1,28 +1,18 @@
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
+
+const fadeIn = keyframes`
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+`;
 
 export const Content = styled.div`
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
-  padding: 20px;
+  padding: 80px 20px 40px;
   box-sizing: border-box;
-
-  .title {
-    font-size: 32px;
-    font-weight: 800;
-    margin-bottom: 16px;
-    text-align: center;
-    color: ${({ theme }) => theme.palette.text.primary};
-  }
-
-  .caption {
-    text-align: center;
-    max-width: 600px;
-    margin: 0 auto 48px;
-    font-size: 18px;
-    color: ${({ theme }) => theme.palette.text.secondary};
-    line-height: 1.6;
-  }
+  animation: ${fadeIn} 0.6s ease-out forwards;
+  min-height: 100vh;
 `;
 
 export const Grid = styled.div`

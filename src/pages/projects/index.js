@@ -95,16 +95,43 @@ export default function Projects() {
 
   return (
     <Content>
-      <div className="title">The lab!</div>
-      <div className="caption">
-        <p>
-          Here you can find some awesome projects developed by Mauro Chiozzi &
-          Team. Click on them to find out more details!
-        </p>
-      </div>
+      <Typography
+        variant="h2"
+        component="h1"
+        fontWeight="800"
+        align="center"
+        gutterBottom
+        sx={{
+          fontSize: { xs: "2.5rem", md: "3.5rem" },
+          mb: 2,
+          color: (theme) => theme.palette.text.primary,
+        }}
+      >
+        Projects &{" "}
+        <Box component="span" sx={{ color: "primary.main" }}>
+          Experiments
+        </Box>
+      </Typography>
+      <Typography
+        variant="h6"
+        component="p"
+        align="center"
+        color="text.secondary"
+        sx={{
+          maxWidth: 800,
+          mb: 8,
+          mx: "auto",
+          lineHeight: 1.6,
+          fontSize: { xs: "1rem", md: "1.125rem" },
+        }}
+      >
+        Exploring the intersection of software and hardware engineering. Here
+        you'll find a selection of my work, including web applications, backend
+        systems, and hobby development.
+      </Typography>
 
       <Grid>
-        {ProjectsData.map((project) => (
+        {ProjectsData.map((project, index) => (
           <ProjectCard
             key={project.id}
             project={project}
