@@ -1,8 +1,8 @@
 import React, { useContext } from "react";
 import { ThemeContext } from "../../contexts/ThemeContext";
 import { Footer as FooterContainer } from "./styles";
-import Tooltip from "@material-ui/core/Tooltip";
-import { withStyles } from "@material-ui/core/styles";
+import { Tooltip, Zoom } from "@mui/material";
+import { styled } from "@mui/material/styles";
 import {
   FaLinkedin,
   FaGithub,
@@ -10,50 +10,68 @@ import {
   FaFileDownload,
 } from "react-icons/fa";
 import ThemeSwitch from "../ThemeSwitch";
+import Resume from "../../assets/files/mChiozzi.pdf";
 
-const LightTooltip = withStyles(() => ({
-  tooltip: {
-    fontSize: 13,
+const StyledTooltip = styled(({ className, ...props }) => (
+  <Tooltip {...props} classes={{ popper: className }} />
+))(({ theme }) => ({
+  "& .MuiTooltip-tooltip": {
+    backgroundColor: theme.palette.background.paper,
+    color: theme.palette.text.primary,
+    boxShadow: theme.shadows[4],
+    fontSize: 12,
+    fontWeight: 600,
   },
-}))(Tooltip);
+  "& .MuiTooltip-arrow": {
+    color: theme.palette.background.paper,
+  },
+}));
 
 export default function Footer() {
   const { toggleTheme } = useContext(ThemeContext);
 
   return (
     <FooterContainer>
-      <LightTooltip title="GitHub" arrow>
+      <StyledTooltip title="GitHub" arrow TransitionComponent={Zoom}>
         <a
-          href={"https://github.com/maurochiozzi"}
+          href="https://github.com/maurochiozzi"
           target="_blank"
           rel="noopener noreferrer"
+          aria-label="GitHub Profile"
         >
           <FaGithub />
         </a>
-      </LightTooltip>
-      <LightTooltip title="LinkedIn" arrow>
+      </StyledTooltip>
+      <StyledTooltip title="LinkedIn" arrow TransitionComponent={Zoom}>
         <a
-          href={"https://www.linkedin.com/in/maurochiozzi/"}
+          href="https://www.linkedin.com/in/maurochiozzi/"
           target="_blank"
           rel="noopener noreferrer"
+          aria-label="LinkedIn Profile"
         >
           <FaLinkedin />
         </a>
-      </LightTooltip>
-      <LightTooltip title="e-mail" arrow>
+      </StyledTooltip>
+      <StyledTooltip title="Send Email" arrow TransitionComponent={Zoom}>
         <a
-          href={"mailto: mchiozzi95@gmail.com"}
+          href="mailto:hire.chiozzi@gmail.com"
           target="_blank"
           rel="noopener noreferrer"
+          aria-label="Send Email"
         >
           <FaEnvelope />
         </a>
-      </LightTooltip>
-      <LightTooltip title="Download Resume" arrow>
-        <a href="/resume.pdf" target="_blank" rel="noopener noreferrer">
+      </StyledTooltip>
+      <StyledTooltip title="Download Resume" arrow TransitionComponent={Zoom}>
+        <a
+          href={Resume}
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Download Resume"
+        >
           <FaFileDownload />
         </a>
-      </LightTooltip>
+      </StyledTooltip>
       <div style={{ marginLeft: "auto", marginRight: "16px" }}>
         <ThemeSwitch toggleTheme={toggleTheme} />
       </div>
