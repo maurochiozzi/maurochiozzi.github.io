@@ -5,29 +5,28 @@ import tmb from "./tmb.jpg";
 
 export const embraer = {
   id: 2,
-  title: "Embraer",
-  caption: "Embraer Quality Engineering Team.",
+  title: "Senior Software Engineer @ Embraer",
+  caption: "Tools and Automation Team.",
   thumbnail: tmb,
   text: [
-    "At Embraer, a lot of projects were developed, going through process automation using Python, Web/SAP scrapping, to process management improvements using web development.",
-    "The main tasks during this role were the development of new scripts to reduce time spent doing repetitive tasks, quality process follow-up (Corrective Actions and Non-conformity analysis), and development of new systems to help Quality Team gain performance and improve product quality, focusing also on non-conformity reduction.",
-    "See the source to access Embraer main page and learn more about this company.",
+    "I managed the end-to-end web development lifecycle at Embraer, architecting robust Python backend solutions and responsive React frontend interfaces. I led a team of four developers to build mission-critical systems that optimized quality management and aircraft maintenance processes.",
+    "A key achievement was introducing asynchronous data pipelines using Celery and RabbitMQ to automate data scraping from legacy systems like SAP and MES. This infrastructure streamlined ETL operations for our data lake, enabling Power BI dashboards for data-driven decisions and achieving annual operational savings exceeding US$100,000.",
+    "My work focused on system performance and technical rigor, utilizing expert-level debugging and root cause evaluation to ensure the reliability of high-stakes aerospace tools.",
   ],
   source: "https://embraer.com/global/en",
   key_developers: ["Mauro Chiozzi"],
-  tools: ["Python/DRF", "React.js", "SAP Script", "Quality Tools"],
+  tools: [
+    "Python (Django/Flask)",
+    "React.js",
+    "Celery & RabbitMQ",
+    "PostgreSQL",
+    "SAP Scripting",
+    "Power BI",
+    "ETL Pipelines",
+  ],
   pictures: [
-    {
-      id: 1,
-      src: embraer1,
-    },
-    {
-      id: 2,
-      src: embraer2,
-    },
-    {
-      id: 3,
-      src: embraer3,
-    },
+    { id: 1, src: embraer1 },
+    { id: 2, src: embraer2 },
+    { id: 3, src: embraer3 },
   ],
 };

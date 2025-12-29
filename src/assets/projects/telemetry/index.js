@@ -1,37 +1,44 @@
 export const telemetry = {
   id: 6,
-  title: "CK Telemetry",
-  caption: "A Java-based desktop application for real-time data visualization.",
+  title: "CK Telemetry Systems",
+  caption:
+    "Real-time data acquisition and visualization for high-performance vehicles.",
   thumbnail: require("./tmb.png"),
   text: [
-    "A Java-based desktop application for real-time data visualization acquired from the embedded system installed on our Baja SAE vehicle and also for our AeroDesign SAE airplane.",
-    "This application receives the vehicle data through the Receiver connected on the USB port, and by reading the data as it is received, the application can match the data plot with the data rate transmission from the embedded system. Also, while the visualization is done, the application does the duty of logging the data being received in a friendly dataframe.",
-    "Besides the visualization and logging, the application relays in other features such as lapping counting; fast communication with the vehicle pilot using pre-set messages; on-time deviation calculus; runtime error output; and much more. Other features like previous lap data comparison with current lap data on time were still on development.",
-    "Unfortunately, the flex layout was not a key feature. For each purpose, for each requirement, the layout needed to be hardcoded changed, and besides being used for two different purposes (Baja and Aero) in many different competitions (local, regional, national, international), the rigid layout was shown to be a pain in the neck in every single upgrade. By this, after almost 4 years of usage and despite being developed using Java Swing, this application became obsolete, and it will be replaced by other application using modern technologies (maybe Seriouslogger and LiverPlot, let see how it goes).",
+    "I developed this Java-based mission application to provide real-time telemetry for the Baja SAE and AeroDesign SAE competition teams. The system manages high-frequency data acquisition from onboard embedded sensors, providing the engineering team with immediate visibility into vehicle performance and structural integrity.",
+    "The technical core involves low-level serial communication via USB, synchronizing incoming RF data streams with a localized processing engine. I implemented custom data-logging algorithms to generate reliable dataframes for post-run analysis, ensuring that the software maintained precise data rates without packet loss during high-speed maneuvers.",
+    "Beyond visualization, the system includes features for pilot-to-pit communication, automated lap timing, and real-time deviation calculus. Operating in high-pressure competition environments required expert-level debugging and root cause evaluation, as any system failure directly impacted the team's performance on the track or in the air.",
+    "This project provided a significant lesson in software scalability. While the Java Swing architecture served the teams for four years, the rigid layout presented technical debt that hindered rapid iteration across different vehicle configurations. This led to a strategic decision to transition toward a more modular, decoupled architecture using modern logging and plotting frameworks, prioritizing flexibility and long-term maintainability.",
   ],
   source: "",
   key_developers: ["Mauro Chiozzi"],
-  tools: ["Java", "RF Communication", "Java Swing"],
+  tools: [
+    "Java",
+    "Serial Communication (RS-232/USB)",
+    "Java Swing",
+    "RF Data Acquisition",
+    "Real-time Data Processing",
+  ],
   pictures: [
     {
       id: 1,
       src: require("./ckt-1.png"),
-      legend: "CK Telemetry on Baja SAE application",
+      legend: "CK Telemetry: Baja SAE Real-time Dashboard",
     },
     {
       id: 2,
       src: require("./ckt-2.png"),
-      legend: "CK Telemetry on AeroDesign SAE application",
+      legend: "CK Telemetry: AeroDesign Flight Analytics",
     },
     {
       id: 3,
       src: require("./ckt-3.png"),
-      legend: "CK Telemetry next steps",
+      legend: "Next-gen architecture planning",
     },
     {
       id: 4,
       src: require("./ckt-4.JPG"),
-      legend: "Receptor used to receive vehicle data from USB connection",
+      legend: "RF Receptor for USB hardware-software interface",
     },
   ],
 };
