@@ -1,6 +1,5 @@
 import React from "react";
 import { Content } from "./styles";
-// If you use react-router-dom, import Link for internal CTAs
 import { Link } from "react-router-dom";
 import Profile from "../../components/profile";
 import Resume from "../../assets/files/mChiozzi.pdf";

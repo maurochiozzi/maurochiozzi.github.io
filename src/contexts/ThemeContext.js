@@ -5,7 +5,6 @@ import {
 } from "@mui/material/styles";
 import { ThemeProvider as StyledThemeProvider } from "styled-components";
 
-// Tailwind-like color palette source
 const colors = {
   orange: {
     500: "#f97316",

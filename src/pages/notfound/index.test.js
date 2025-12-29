@@ -3,7 +3,6 @@ import { render, screen } from "@testing-library/react";
 import { MemoryRouter } from "react-router-dom";
 import NotFound from "./index";
 
-// Mock ga-gtag to prevent errors during testing
 jest.mock("ga-gtag", () => ({
   gtag: jest.fn(),
 }));
