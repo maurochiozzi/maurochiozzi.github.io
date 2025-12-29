@@ -14,7 +14,7 @@ describe("Projects Page", () => {
         future={{ v7_startTransition: true, v7_relativeSplatPath: true }}
       >
         <Projects />
-      </MemoryRouter>
+      </MemoryRouter>,
     );
   });
 });

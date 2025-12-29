@@ -17,10 +17,10 @@ describe("NotFound Page", () => {
         }}
       >
         <NotFound />
-      </MemoryRouter>
+      </MemoryRouter>,
     );
     expect(
-      screen.getByText(/Ooops! Page not found, Error 404/i)
+      screen.getByText(/Ooops! Page not found, Error 404/i),
     ).toBeInTheDocument();
   });
 
@@ -33,7 +33,7 @@ describe("NotFound Page", () => {
         }}
       >
         <NotFound />
-      </MemoryRouter>
+      </MemoryRouter>,
     );
     const link = screen.getByRole("link", { name: /Go back to safety/i });
     expect(link).toBeInTheDocument();
