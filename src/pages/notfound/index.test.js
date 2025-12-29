@@ -19,7 +19,9 @@ describe("NotFound Page", () => {
         <NotFound />
       </MemoryRouter>
     );
-    expect(screen.getByText(/Ooops! Page not found, Error 404/i)).toBeInTheDocument();
+    expect(
+      screen.getByText(/Ooops! Page not found, Error 404/i)
+    ).toBeInTheDocument();
   });
 
   it("renders a link to go back home", () => {
