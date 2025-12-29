@@ -5,7 +5,7 @@ const fadeIn = keyframes`
   to { opacity: 1; transform: translateY(0); }
 `;
 
-export const Content = styled.div`
+export const Content = styled.main`
   width: 100%;
   min-height: 100vh;
   display: flex;
@@ -17,19 +17,27 @@ export const Content = styled.div`
   box-sizing: border-box;
   animation: ${fadeIn} 0.8s ease-out forwards;
 
-  .main-content {
+  .layout-wrapper {
     max-width: 800px;
     width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-bottom: auto;
     flex: 1;
     justify-content: center;
+    margin-bottom: 40px;
+  }
+
+  .hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 64px;
   }
 
   .footer-content {
-    margin-top: 40px;
+    margin-top: auto;
     padding: 20px;
     color: ${({ theme }) => theme.palette.text.secondary};
     font-size: 0.9rem;
@@ -64,7 +72,7 @@ export const Content = styled.div`
   h1 {
     font-size: clamp(2.5rem, 6vw, 4.5rem);
     font-weight: 800;
-    margin: 0 0 16px 0;
+    margin: 48px 0 16px 0;
     color: ${({ theme }) => theme.palette.text.primary};
     line-height: 1.1;
     letter-spacing: -0.02em;
@@ -152,7 +160,7 @@ export const Content = styled.div`
   }
 
   .biography {
-    margin-top: 60px;
+    margin-top: 0;
     max-width: 680px;
     text-align: left;
     font-size: 1.05rem;
@@ -161,6 +169,14 @@ export const Content = styled.div`
     animation: ${fadeIn} 1s ease-out forwards;
     animation-delay: 0.3s;
     opacity: 0;
+
+    h3 {
+      font-size: 1.5rem;
+      font-weight: 700;
+      margin-bottom: 24px;
+      color: ${({ theme }) => theme.palette.text.primary};
+      text-align: center;
+    }
 
     p {
       margin-bottom: 24px;

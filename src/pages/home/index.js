@@ -10,35 +10,38 @@ import { FaExternalLinkAlt } from "react-icons/fa";
 export default function Home() {
   return (
     <Content>
-      <Profile />
-      <div className="main-content">
-        <h1>
-          Hey! I'm <span className="highlight">Mauro Chiozzi</span>
-        </h1>
-        <h2>Python Software Engineer</h2>
-        <p className="description">
-          Specializing in <b>Python Backend</b> (Django/Flask) and <b>React</b>{" "}
-          frontend development. I build scalable automation and web systems with
-          an engineering mindset that prioritizes system stability, technical
-          precision, and long-term maintainability.
-        </p>
+      <div className="layout-wrapper">
+        <section className="hero">
+          <Profile />
+          <h1>
+            Hey! I'm <span className="highlight">Mauro Chiozzi</span>
+          </h1>
+          <h2>Python Software Engineer</h2>
+          <p className="description">
+            Specializing in <b>Python Backend</b> (Django/Flask) and{" "}
+            <b>React</b> frontend development. I build scalable automation and
+            web systems with an engineering mindset that prioritizes system
+            stability, technical precision, and long-term maintainability.
+          </p>
 
-        {/* Direct CTAs make the home page more functional */}
-        <div className="cta-group">
-          <Link to="/projects" className="cta-button">
-            View Projects
-          </Link>
-          <a
-            href={Resume}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="cta-secondary"
-          >
-            Download CV
-          </a>
-        </div>
+          {/* Direct CTAs make the home page more functional */}
+          <div className="cta-group">
+            <Link to="/projects" className="cta-button">
+              View Projects
+            </Link>
+            <a
+              href={Resume}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="cta-secondary"
+            >
+              Download CV
+            </a>
+          </div>
+        </section>
 
-        <div className="biography">
+        <section className="biography">
+          <h3>About Me</h3>
           <p>
             My path began at{" "}
             <span className="highlight">
@@ -104,10 +107,10 @@ export default function Home() {
             tools that empower users to make{" "}
             <span className="highlight">data-driven decisions</span>.
           </p>
-        </div>
+        </section>
       </div>
 
-      <div className="footer-content">
+      <footer className="footer-content">
         <p className="social-links">
           Follow my work on{" "}
           <a
@@ -129,7 +132,7 @@ export default function Home() {
         <small>
           <i>Compliments, suggestions, or coffee: hire.chiozzi@gmail.com</i>
         </small>
-      </div>
+      </footer>
     </Content>
   );
 }

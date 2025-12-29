@@ -11,6 +11,12 @@ const PictureFrame = styled.img`
   margin-top: 20px;
   margin-left: auto;
   margin-right: auto;
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease-in-out;
+
+  &:hover {
+    transform: scale(1.02);
+  }
 `;
 
 export default PictureFrame;
