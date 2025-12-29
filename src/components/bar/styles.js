@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const Nav = styled.div`
+export const Nav = styled.nav`
   height: 32px;
 
   position: fixed;
@@ -30,12 +30,36 @@ export const Nav = styled.div`
   transition: all 0.3s ease-in-out;
 
   a {
-    padding: 0 16px;
     text-decoration: none;
     color: inherit;
-    transition: opacity 0.2s;
-    &:hover {
-      opacity: 0.8;
+    transition: all 0.2s ease;
+  }
+
+  .brand {
+    font-weight: 800;
+    font-size: 1.1rem;
+    letter-spacing: -0.02em;
+    padding: 0 8px;
+  }
+
+  .nav-links {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+
+    a {
+      padding: 6px 16px;
+      border-radius: 20px;
+      font-size: 0.9rem;
+      font-weight: 600;
+      opacity: 0.7;
+
+      &:hover,
+      &.active {
+        opacity: 1;
+        color: ${({ theme }) => theme.palette.primary.main};
+        background: ${({ theme }) => theme.palette.primary.main}15;
+      }
     }
   }
 
