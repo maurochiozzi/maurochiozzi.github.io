@@ -3,16 +3,16 @@ import styled from "styled-components";
 export const CardContainer = styled.div`
   background: ${({ theme }) =>
     theme.palette.mode === "dark"
-      ? "rgba(30, 41, 59, 0.6)"
-      : "rgba(255, 255, 255, 0.6)"};
-  backdrop-filter: blur(16px) saturate(180%);
-  -webkit-backdrop-filter: blur(16px) saturate(180%);
+      ? "rgba(30, 41, 59, 0.7)"
+      : "rgba(255, 255, 255, 0.7)"};
+  backdrop-filter: blur(20px) saturate(180%);
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
   border-radius: 24px;
   overflow: hidden;
   box-shadow:
-    -10px -10px 30px 0 rgba(0, 0, 0, 0.1),
-    10px 10px 30px 0 rgba(0, 0, 0, 0.1);
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    0 10px 30px -10px rgba(0, 0, 0, 0.1),
+    0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   cursor: pointer;
   border: 1px solid
     ${({ theme }) =>
@@ -26,11 +26,12 @@ export const CardContainer = styled.div`
   &:hover {
     transform: translateY(-8px);
     box-shadow:
-      0 20px 40px -10px rgba(0, 0, 0, 0.15),
-      12px 12px 30px 5px ${({ theme }) => theme.palette.primary.main}80;
+      0 20px 40px -10px rgba(0, 0, 0, 0.2),
+      0 0 20px 0 ${({ theme }) => theme.palette.primary.main}40;
+    border-color: ${({ theme }) => theme.palette.primary.main}80;
 
     .card-image img {
-      transform: scale(1.05);
+      transform: scale(1.1);
     }
   }
 `;
@@ -67,7 +68,7 @@ export const CardContent = styled.div`
     margin: 0 0 24px;
     font-size: 16px;
     color: ${({ theme }) => theme.palette.text.secondary};
-    line-height: 1.5;
+    line-height: 1.6;
     display: -webkit-box;
     -webkit-line-clamp: 3;
     -webkit-box-orient: vertical;
