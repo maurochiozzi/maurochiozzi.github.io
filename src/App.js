@@ -9,7 +9,6 @@ import Footer from "./components/footer";
 import { ThemeProvider } from "./contexts/ThemeContext";
 import GlobalStyles from "./GlobalStyles";
 
-const About = lazy(() => import("./pages/about"));
 const Home = lazy(() => import("./pages/home"));
 const Projects = lazy(() => import("./pages/projects"));
 const NotFound = lazy(() => import("./pages/notfound"));
@@ -44,7 +43,6 @@ export default function App() {
           >
             <Routes>
               <Route path="/" element={<Home />} />
-              <Route path="/about" element={<About />} />
               <Route path="/projects" element={<Projects />} />
               <Route path="*" element={<NotFound />} />
             </Routes>
