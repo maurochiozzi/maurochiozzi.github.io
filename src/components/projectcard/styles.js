@@ -56,25 +56,6 @@ export const CardContent = styled.div`
   display: flex;
   flex-direction: column;
 
-  h3 {
-    margin: 0 0 12px;
-    font-size: 22px;
-    font-weight: 800;
-    letter-spacing: -0.5px;
-    color: ${({ theme }) => theme.palette.text.primary};
-  }
-
-  p {
-    margin: 0 0 24px;
-    font-size: 16px;
-    color: ${({ theme }) => theme.palette.text.secondary};
-    line-height: 1.6;
-    display: -webkit-box;
-    -webkit-line-clamp: 3;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
-  }
-
   .tags {
     margin-top: auto;
     display: flex;
