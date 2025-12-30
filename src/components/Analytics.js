@@ -6,7 +6,9 @@ const Analytics = () => {
   const location = useLocation();
 
   useEffect(() => {
-    pageview(location.pathname + location.search);
+    if (process.env.NODE_ENV === "production") {
+      pageview(location.pathname + location.search);
+    }
   }, [location]);
 
   return null;
