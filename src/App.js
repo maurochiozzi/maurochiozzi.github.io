@@ -6,6 +6,7 @@ import CssBaseline from "@mui/material/CssBaseline";
 
 import Bar from "./components/bar";
 import Footer from "./components/footer";
+import Analytics from "./components/Analytics";
 import { ThemeProvider } from "./contexts/ThemeContext";
 import GlobalStyles from "./GlobalStyles";
 
@@ -25,6 +26,7 @@ export default function App() {
           v7_relativeSplatPath: true,
         }}
       >
+        <Analytics />
         <Bar />
 
         <main className="app-main-content">

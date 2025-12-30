@@ -23,7 +23,6 @@ export default function Home() {
             stability, technical precision, and long-term maintainability.
           </p>
 
-          {/* Direct CTAs make the home page more functional */}
           <div className="cta-group">
             <Link to="/projects" className="cta-button">
               View Projects
