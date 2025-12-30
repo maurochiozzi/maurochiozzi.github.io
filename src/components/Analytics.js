@@ -1,13 +1,15 @@
 import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
-import { pageview } from "ga-gtag";
+import { gtag } from "ga-gtag";
 
 const Analytics = () => {
   const location = useLocation();
 
   useEffect(() => {
     if (process.env.NODE_ENV === "production") {
-      pageview(location.pathname + location.search);
+      gtag("event", "page_view", {
+        page_path: location.pathname + location.search,
+      });
     }
   }, [location]);
 
