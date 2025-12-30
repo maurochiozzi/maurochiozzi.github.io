@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.js": "/static/js/main.1673a866.js",
+    "main.js": "/static/js/main.fd5ade9a.js",
     "static/js/327.f68be187.chunk.js": "/static/js/327.f68be187.chunk.js",
     "static/css/359.30be8b5d.chunk.css": "/static/css/359.30be8b5d.chunk.css",
     "static/js/359.65bb4658.chunk.js": "/static/js/359.65bb4658.chunk.js",
@@ -65,7 +65,7 @@
     "static/media/mChiozzi.pdf": "/static/media/mChiozzi.8688c5d2808f1051fbda.pdf",
     "static/media/catia_03.png": "/static/media/catia_03.2bd8432870716fa895fd.png",
     "index.html": "/index.html",
-    "main.1673a866.js.map": "/static/js/main.1673a866.js.map",
+    "main.fd5ade9a.js.map": "/static/js/main.fd5ade9a.js.map",
     "327.f68be187.chunk.js.map": "/static/js/327.f68be187.chunk.js.map",
     "359.30be8b5d.chunk.css.map": "/static/css/359.30be8b5d.chunk.css.map",
     "359.65bb4658.chunk.js.map": "/static/js/359.65bb4658.chunk.js.map",
@@ -73,6 +73,6 @@
     "465.f9d8b20a.chunk.js.map": "/static/js/465.f9d8b20a.chunk.js.map"
   },
   "entrypoints": [
-    "static/js/main.1673a866.js"
+    "static/js/main.fd5ade9a.js"
   ]
 }
